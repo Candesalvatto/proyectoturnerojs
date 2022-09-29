@@ -88,7 +88,7 @@ function mamografia () {
                 alert("Ese horario esta fuera de nuestro rango de atencion");
                 horario();}
             else if (horario <8) {alert("Ese horario esta fuera de nuestro rango de atencion");
-                mamografia();
+                mamografia();}
     
 alert (`Tu turno es el dia ${elegirDia} a las ${horario} hs.`);
         opcionesPrincipales();                     
@@ -243,8 +243,8 @@ function densitometria () {
                 horario();}
             else if (horario <8) {alert("Ese horario esta fuera de nuestro rango de atencion");
                 horario();}
-            
-        
+
+       
 alert (`Tu turno es el dia ${elegirDia} a las ${horario} hs.`);
             opcionesPrincipales();  
-    }
+}
