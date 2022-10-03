@@ -1,0 +1,60 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #FEF8F6;
+}
+
+#descript_info {
+  width: 80%;
+}
+
+p {
+  color: #525099;
+  font-family: "Tajawal", sans-serif;
+  font-size: 1.2em;
+  text-align: justify;
+  margin-top: 5%;
+}
+
+h1,
+h2 {
+  color: #525099;
+  font-family: "Tajawal", sans-serif;
+  font-size: 1.5em;
+  font-weight: 900;
+  text-align: center;
+  margin-top: 5%;
+}
+
+li {
+  color: #525099;
+  font-family: "Tajawal", sans-serif;
+  text-decoration: none;
+  text-align: justify;
+  font-size: 1.2em;
+  list-style: none;
+}
+
+.logo {
+  width: 200px;
+}
+
+.carousel_slider {
+  width: 100%;
+}
+.carousel_slider img {
+  width: 100%;
+}
+
+.copy {
+  color: #525099;
+  font-family: "Tajawal", sans-serif;
+  font-size: 0.5em;
+  margin-top: 10%;
+}
+
+/*# sourceMappingURL=styles.css.map */

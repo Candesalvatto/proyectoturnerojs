@@ -6,7 +6,7 @@ let dni = parseInt(prompt("Ingrese su DNI"));console.log (dni);
 
 function opcionesPrincipales() {
     let opcionTurnos= parseInt ( 
-    prompt ("Bienvenido! ¿Que necesita realizar? \n 1 Solicitar turno \n 2 Cancelar turno"));
+    prompt ("Bienvenido! ¿Que necesita realizar? \n 1 Solicitar turno \n 2 Cancelar turno \n 3 Salir" ));
     switch (opcionTurnos) {
         case 1:
             solicitarTurno();
@@ -16,6 +16,9 @@ function opcionesPrincipales() {
         default:
             alert("Dato invalido");
             break;
+        case 3: salir();
+            break;
+            
     }
 
 }
