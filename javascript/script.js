@@ -27,13 +27,18 @@ let nombreRegistro = prompt ("Ingrese su nombre");
 let apellidoRegistro = prompt ("Ingrese su apellido");
 let nacimientoRegistro = parseInt(prompt ("Ingrese su fecha de nacimiento"));
 let dniRegistro = prompt ("Ingrese su DNI");
-let contrasenaRegistro = prompt ("Cree una contraseña");
-let idPaciente = for (i=0, i < 2, i ++) {alert (`Tu numero de ID es ${idPaciente}`)};
+let contrasenaRegistro = parseInt (prompt ("Cree una contraseña numerica"));
+
 
 const registrar = new Registro (nombreRegistro,apellidoRegistro,nacimientoRegistro,dniRegistro,contrasenaRegistro);
 console.log (registrar);
 alert (`Su nombre de usuario es ${dniRegistro} y su contraseña es ${contrasenaRegistro}`);
+console.log (`Usuario: ${dniRegistro}, Contraseña: ${contrasenaRegistro}`)
+let idPaciente = 1012;
+for (i=1012; i < 1214; i ++) {alert (`Tu numero de ID asignado es ${idPaciente}`);
+break};
 ingreso();
+
 
 
 
@@ -77,6 +82,7 @@ function opcionesPrincipales() {
 }
 opcionesPrincipales();
 
+
 function solicitarTurno () {
     let opcionDiagnostico= parseInt (prompt("Elige metodo diagnostico: \n 1 Mamografia \n 2 Ecografia Mamaria \n 3 Ecografia ginecologica \n 4 Punciones mamarias \n 5 Densitometria osea" ));
     switch (opcionDiagnostico) {
@@ -111,12 +117,28 @@ function cancelarTurno () {
             opcionesPrincipales();  
 
 }
-const diasSemana=  ["lunes", "martes", "miercoles", "jueves", "viernes"];
+
+const horario= [8,9,10,11,12,13,14,15,16,17,18];
+const diasSemana= [
+    {nro:1, dia: "lunes", hora: [horario]},
+    {nro:2, dia: "martes",hora: [horario]},
+    {nro:3, dia: "miercoles",hora: [horario]},
+    {nro:4, dia: "jueves",hora: [horario]},
+    {nro:5, dia: "viernes",hora: [horario]},
+];
+
+
 
 function mamografia () {
     alert ("Indicaciones: Traer mamografia anterior (imagenes e informe)");
-    let elegirDia= prompt ("Escribe que dia de la semana quieres");
-    switch (elegirDia) {
+    diasSemana.forEach ((element) =>{prompt (`Escribe el dia de la semana que quieres ${diasSemana.dia}`)});
+   /* let elegirDia= diasSemana.find ((diasSemana) => diasSemana.dia  );
+    prompt= (`Escribe que dia de la semana quieres ${elegirDia}`);
+    /*let elegirDia="";
+    for (const element of diasSemana) {diasSemana += element.dia + "\n";};
+    prompt (`Elige un dia de la semana ${elegirDia}`;)*/
+
+    /*switch (elegirDia) {
             case "lunes": 
         horario=  Number (prompt ("Los dias lunes podemos de 8 a 20 hs, escribe una hora"));
         break;
@@ -138,7 +160,7 @@ function mamografia () {
             mamografia();
 
 
-            }
+            }*/
             
             if (horario > 20) {
                 alert("Ese horario esta fuera de nuestro rango de atencion");
