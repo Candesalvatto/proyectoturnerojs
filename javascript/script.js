@@ -1,3 +1,14 @@
+const horario= [8,9,10,11,12,13,14,15,16,17,18];
+const diasSemana= [
+    {nro:1, dia: "lunes", hora: [horario]},
+    {nro:2, dia: "martes",hora: [horario]},
+    {nro:3, dia: "miercoles",hora: [horario]},
+    {nro:4, dia: "jueves",hora: [horario]},
+    {nro:5, dia: "viernes",hora: [horario]},
+];
+
+
+
 function opcionesEntrada() {
     let opcionResgistro= (
     prompt ("\n 1 REGISTRARME \n 2 INGRESAR " ));
@@ -118,27 +129,15 @@ function cancelarTurno () {
 
 }
 
-const horario= [8,9,10,11,12,13,14,15,16,17,18];
-const diasSemana= [
-    {nro:1, dia: "lunes", hora: [horario]},
-    {nro:2, dia: "martes",hora: [horario]},
-    {nro:3, dia: "miercoles",hora: [horario]},
-    {nro:4, dia: "jueves",hora: [horario]},
-    {nro:5, dia: "viernes",hora: [horario]},
-];
-
 
 
 function mamografia () {
     alert ("Indicaciones: Traer mamografia anterior (imagenes e informe)");
-    diasSemana.forEach ((element) =>{prompt (`Escribe el dia de la semana que quieres ${diasSemana.dia}`)});
-   /* let elegirDia= diasSemana.find ((diasSemana) => diasSemana.dia  );
-    prompt= (`Escribe que dia de la semana quieres ${elegirDia}`);
-    /*let elegirDia="";
-    for (const element of diasSemana) {diasSemana += element.dia + "\n";};
-    prompt (`Elige un dia de la semana ${elegirDia}`;)*/
+    let listaDias= "\n";
+    for (const element of diasSemana) { listaDias += element.dia + "\n";}
+    const elegirDia= prompt (`Escribe el dia de la semana que quieres ${listaDias}`);
 
-    /*switch (elegirDia) {
+    switch (elegirDia) {
             case "lunes": 
         horario=  Number (prompt ("Los dias lunes podemos de 8 a 20 hs, escribe una hora"));
         break;
@@ -160,7 +159,7 @@ function mamografia () {
             mamografia();
 
 
-            }*/
+            }
             
             if (horario > 20) {
                 alert("Ese horario esta fuera de nuestro rango de atencion");
@@ -179,7 +178,9 @@ alert (`Tu turno es el dia ${elegirDia} a las ${horario} hs.`);
 
 function ecoMamaria () {
     alert ("Indicaciones: Traer ecografia anterior (imagenes e informe)");
-    let elegirDia= prompt ("Escribe que dia de la semana quieres");
+    let listaDias= "\n";
+    for (const element of diasSemana) { listaDias += element.dia + "\n";}
+    const elegirDia= prompt (`Escribe el dia de la semana que quieres ${listaDias}`);
     switch (elegirDia) {
             case "lunes": 
         horario=  Number (prompt ("Los dias lunes podemos de 8 a 20 hs, escribe una hora"));
@@ -217,7 +218,9 @@ alert (`Tu turno es el dia ${elegirDia} a las ${horario} hs.`);
 
 function ecoGinecologica () {
     alert ("Indicaciones: Traer ecografia anterior (imagenes e informe)");
-    let elegirDia= prompt ("Escribe que dia de la semana quieres");
+    let listaDias= "\n";
+    for (const element of diasSemana) { listaDias += element.dia + "\n";}
+    const elegirDia= prompt (`Escribe el dia de la semana que quieres ${listaDias}`);
     switch (elegirDia) {
             case "lunes": 
         horario=  Number (prompt ("Los dias lunes podemos de 8 a 20 hs, escribe una hora"));
@@ -254,7 +257,9 @@ alert (`Tu turno es el dia ${elegirDia} a las ${horario} hs.`);
     
 function punciones () {
     alert ("Indicaciones: Traer todos los ultimos estudios mamarios realizados");
-    let elegirDia= prompt ("Escribe que dia de la semana quieres");
+    let listaDias= "\n";
+    for (const element of diasSemana) { listaDias += element.dia + "\n";}
+    const elegirDia= prompt (`Escribe el dia de la semana que quieres ${listaDias}`);
     switch (elegirDia) {
             case "lunes": 
         horario=  Number (prompt ("Los dias lunes podemos de 8 a 20 hs, escribe una hora"));
@@ -293,7 +298,9 @@ alert (`Tu turno es el dia ${elegirDia} a las ${horario} hs.`);
 
 function densitometria () {
     alert ("Indicaciones: Traer densitometria anterior (imagenes e informe)");
-    let elegirDia= prompt ("Escribe que dia de la semana quieres");
+    let listaDias= "\n";
+    for (const element of diasSemana) { listaDias += element.dia + "\n";}
+    const elegirDia= prompt (`Escribe el dia de la semana que quieres ${listaDias}`);
     switch (elegirDia) {
             case "lunes": 
         horario=  Number (prompt ("Los dias lunes podemos de 8 a 20 hs, escribe una hora"));
