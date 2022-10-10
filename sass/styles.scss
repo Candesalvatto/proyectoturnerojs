@@ -11,12 +11,14 @@
 body { background-color: #FEF8F6;}
 
 #descript_info {width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 p {@include estilos_general;
 font-size: 1.2em;
 text-align: justify;
-margin-top: 5%;
+margin-top: 10%;
 }
 
 h1,
@@ -24,7 +26,7 @@ h2 {@include estilos_general;
 font-size: 1.5em;
 font-weight: 900;
 text-align: center;
-margin-top: 5%;
+margin-top: 10%;
 
 }
 li {@include estilos_general;
@@ -38,5 +40,16 @@ list-style: none;}
 img {width: 100%;}}
 
 .copy {@include estilos_general;
-font-size: 0.5em;
-margin-top: 10%;}
+font-size: 0.8em;
+margin-top: 10%;
+text-align: center;}
+
+.boton_turnos {color: #A8518A;
+font-size: 1.5em;
+border: 2px solid #A8518A;
+font-family: 'Tajawal', sans-serif;
+padding: 10px 25px;
+border-radius: 40px;
+background-color: transparent;
+
+}

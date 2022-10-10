@@ -1,6 +1,59 @@
-let registroNombre = prompt("Ingrese su nombre completo"); console.log (registroNombre);
-let registroApellido = prompt("Ingrese su apellido"); console.log (registroApellido);
-let dni = parseInt(prompt("Ingrese su DNI"));console.log (dni);
+function opcionesEntrada() {
+    let opcionResgistro= (
+    prompt ("\n 1 REGISTRARME \n 2 INGRESAR " ));
+    switch (opcionResgistro) {
+        case "1":
+            Registro();
+            break;
+        case "2": ingreso();
+            break;
+        default:
+            alert("Dato invalido");
+            break;
+}
+}
+opcionesEntrada();
+
+
+function Registro (nombre, apellido, fechaNacimiento, dni) {
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.fechaNacimiento = fechaNacimiento;
+    this.dni = dni;
+    
+}
+
+let nombreRegistro = prompt ("Ingrese su nombre");
+let apellidoRegistro = prompt ("Ingrese su apellido");
+let nacimientoRegistro = parseInt(prompt ("Ingrese su fecha de nacimiento"));
+let dniRegistro = prompt ("Ingrese su DNI");
+let contrasenaRegistro = prompt ("Cree una contraseña");
+let idPaciente = for (i=0, i < 2, i ++) {alert (`Tu numero de ID es ${idPaciente}`)};
+
+const registrar = new Registro (nombreRegistro,apellidoRegistro,nacimientoRegistro,dniRegistro,contrasenaRegistro);
+console.log (registrar);
+alert (`Su nombre de usuario es ${dniRegistro} y su contraseña es ${contrasenaRegistro}`);
+ingreso();
+
+
+
+
+
+function ingreso() {
+    let nombreUsuario = prompt ("Ingrese su usuario");
+    let contrasenaUsuario = prompt ("Ingrese su contraseña"); 
+    while ((nombreUsuario === dniRegistro) && ( contrasenaUsuario === contrasenaRegistro)) 
+    if (nombreUsuario != dniRegistro) {
+        alert ("Su usuario o contraseña con incorrectos. Ingrese de nuevo");
+            return ingreso();
+    } else if (contrasenaUsuario != contrasenaRegistro){
+            alert ("Su usuario o contraseña con incorrectos. Ingrese de nuevo");
+            return ingreso();
+        } 
+        else{ opcionesPrincipales();
+            
+        }
+    }
 
 
 
@@ -47,7 +100,7 @@ function solicitarTurno () {
 
 function cancelarTurno () {
     let cancelacion= parseInt ( prompt ("Por favor ingrese su DNI para cancelar su turno"));
-    if (cancelacion === dni) {
+    if (cancelacion === dniRegistro) {
         alert ("Su turno ha sido cancelado con exito");
     }
     else {
@@ -58,7 +111,7 @@ function cancelarTurno () {
             opcionesPrincipales();  
 
 }
-
+const diasSemana=  ["lunes", "martes", "miercoles", "jueves", "viernes"];
 
 function mamografia () {
     alert ("Indicaciones: Traer mamografia anterior (imagenes e informe)");
