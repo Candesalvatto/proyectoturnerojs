@@ -1,4 +1,4 @@
-const horario= [8,9,10,11,12,13,14,15,16,17,18];
+const horario= [8,9,10,11,12,13,14,15,16,17,18,19,20];
 const diasSemana= [
     {nro:1, dia: "lunes", hora: [horario]},
     {nro:2, dia: "martes",hora: [horario]},
@@ -6,6 +6,7 @@ const diasSemana= [
     {nro:4, dia: "jueves",hora: [horario]},
     {nro:5, dia: "viernes",hora: [horario]},
 ];
+
 
 
 
@@ -139,19 +140,24 @@ function mamografia () {
 
     switch (elegirDia) {
             case "lunes": 
-        horario=  Number (prompt ("Los dias lunes podemos de 8 a 20 hs, escribe una hora"));
+            elegirHorario= parseInt (
+        prompt (`Los dias lunes tenemos estos turnos ${horario.join ("-")} hs. Escribe un horario`));
         break;
             case "martes": 
-        horario= Number (prompt ("Los dias martes podemos de 8 a 20 hs, escribe una hora"));
+            elegirHorario= parseInt (
+            prompt (`Los dias martes tenemos estos turnos ${horario.join ("-")} hs. Escribe un horario`));
         break;
             case "miercoles": 
-        horario= Number (prompt ("Los dias miercoles podemos de 8 a 20 hs, escribe una hora"));
+            elegirHorario= parseInt (
+            prompt (`Los dias miercoles tenemos estos turnos ${horario.join ("-")} hs. Escribe un horario`));
         break;
             case "jueves": 
-        horario= Number (prompt ("Los dias jueves podemos de 8 a 20 hs, escribe una hora"));
+            elegirHorario= parseInt (
+            prompt (`Los dias jueves tenemos estos turnos ${horario.join ("-")} hs. Escribe un horario`));
         break;
             case "viernes": 
-        horario= Number (prompt ("Los dias viernes podemos de 8 a 20 hs, escribe una hora"));
+            elegirHorario= parseInt (
+            prompt (`Los dias viernes tenemos estos turnos ${horario.join ("-")} hs. Escribe un horario`));
         break;
             
         default:
@@ -161,13 +167,13 @@ function mamografia () {
 
             }
             
-            if (horario > 20) {
+            if (elegirHorario > 20) {
                 alert("Ese horario esta fuera de nuestro rango de atencion");
                 horario();}
-            else if (horario <8) {alert("Ese horario esta fuera de nuestro rango de atencion");
+            else if (elegirHorario <8) {alert("Ese horario esta fuera de nuestro rango de atencion");
                 mamografia();}
     
-alert (`Tu turno es el dia ${elegirDia} a las ${horario} hs.`);
+alert (`Tu turno es el dia ${elegirDia} a las ${elegirHorario} hs.`);
         opcionesPrincipales();                     
     }
     
@@ -182,21 +188,26 @@ function ecoMamaria () {
     for (const element of diasSemana) { listaDias += element.dia + "\n";}
     const elegirDia= prompt (`Escribe el dia de la semana que quieres ${listaDias}`);
     switch (elegirDia) {
-            case "lunes": 
-        horario=  Number (prompt ("Los dias lunes podemos de 8 a 20 hs, escribe una hora"));
-        break;
-            case "martes": 
-        horario= Number (prompt ("Los dias martes podemos de 8 a 20 hs, escribe una hora"));
-        break;
-            case "miercoles": 
-        horario= Number (prompt ("Los dias miercoles podemos de 8 a 20 hs, escribe una hora"));
-        break;
-            case "jueves": 
-        horario= Number (prompt ("Los dias jueves podemos de 8 a 20 hs, escribe una hora"));
-        break;
-            case "viernes": 
-        horario= Number (prompt ("Los dias viernes podemos de 8 a 20 hs, escribe una hora"));
-        break;
+        case "lunes": 
+        elegirHorario= parseInt (
+    prompt (`Los dias lunes tenemos estos turnos ${horario.join ("-")} hs. Escribe un horario`));
+    break;
+        case "martes": 
+        elegirHorario= parseInt (
+        prompt (`Los dias martes tenemos estos turnos ${horario.join ("-")} hs. Escribe un horario`));
+    break;
+        case "miercoles": 
+        elegirHorario= parseInt (
+        prompt (`Los dias miercoles tenemos estos turnos ${horario.join ("-")} hs. Escribe un horario`));
+    break;
+        case "jueves": 
+        elegirHorario= parseInt (
+        prompt (`Los dias jueves tenemos estos turnos ${horario.join ("-")} hs. Escribe un horario`));
+    break;
+        case "viernes": 
+        elegirHorario= parseInt (
+        prompt (`Los dias viernes tenemos estos turnos ${horario.join ("-")} hs. Escribe un horario`));
+    break;
             
         default:
             elegirDia= prompt("Ese dia no atendemos");
@@ -204,14 +215,14 @@ function ecoMamaria () {
 
             }
     
-                if (horario > 20) {
+                if (elegirHorario > 20) {
                 alert("Ese horario esta fuera de nuestro rango de atencion");
                 horario();}
-            else if (horario <8) {alert("Ese horario esta fuera de nuestro rango de atencion");
+            else if (elegirHorario <8) {alert("Ese horario esta fuera de nuestro rango de atencion");
                 horario();}
     
     
-alert (`Tu turno es el dia ${elegirDia} a las ${horario} hs.`);
+alert (`Tu turno es el dia ${elegirDia} a las ${elegirHorario} hs.`);
     opcionesPrincipales(); 
     }
     
@@ -222,21 +233,26 @@ function ecoGinecologica () {
     for (const element of diasSemana) { listaDias += element.dia + "\n";}
     const elegirDia= prompt (`Escribe el dia de la semana que quieres ${listaDias}`);
     switch (elegirDia) {
-            case "lunes": 
-        horario=  Number (prompt ("Los dias lunes podemos de 8 a 20 hs, escribe una hora"));
-        break;
-            case "martes": 
-        horario= Number (prompt ("Los dias martes podemos de 8 a 20 hs, escribe una hora"));
-        break;
-            case "miercoles": 
-        horario= Number (prompt ("Los dias miercoles podemos de 8 a 20 hs, escribe una hora"));
-        break;
-            case "jueves": 
-        horario= Number (prompt ("Los dias jueves podemos de 8 a 20 hs, escribe una hora"));
-        break;
-            case "viernes": 
-        horario= Number (prompt ("Los dias viernes podemos de 8 a 20 hs, escribe una hora"));
-        break;
+        case "lunes": 
+        elegirHorario= parseInt (
+    prompt (`Los dias lunes tenemos estos turnos ${horario.join ("-")} hs. Escribe un horario`));
+    break;
+        case "martes": 
+        elegirHorario= parseInt (
+        prompt (`Los dias martes tenemos estos turnos ${horario.join ("-")} hs. Escribe un horario`));
+    break;
+        case "miercoles": 
+        elegirHorario= parseInt (
+        prompt (`Los dias miercoles tenemos estos turnos ${horario.join ("-")} hs. Escribe un horario`));
+    break;
+        case "jueves": 
+        elegirHorario= parseInt (
+        prompt (`Los dias jueves tenemos estos turnos ${horario.join ("-")} hs. Escribe un horario`));
+    break;
+        case "viernes": 
+        elegirHorario= parseInt (
+        prompt (`Los dias viernes tenemos estos turnos ${horario.join ("-")} hs. Escribe un horario`));
+    break;
             
         default:
             elegirDia= prompt("Ese dia no atendemos");
@@ -244,14 +260,14 @@ function ecoGinecologica () {
 
             }
     
-                if (horario > 20) {
+                if (elegirHorario > 20) {
                 alert("Ese horario esta fuera de nuestro rango de atencion");
                 horario();}
-            else if (horario <8) {alert("Ese horario esta fuera de nuestro rango de atencion");
+            else if (elegirHorario <8) {alert("Ese horario esta fuera de nuestro rango de atencion");
                 horario();}
     
     
-alert (`Tu turno es el dia ${elegirDia} a las ${horario} hs.`);
+alert (`Tu turno es el dia ${elegirDia} a las ${elegirHorario} hs.`);
             opcionesPrincipales();  
     }
     
@@ -261,21 +277,26 @@ function punciones () {
     for (const element of diasSemana) { listaDias += element.dia + "\n";}
     const elegirDia= prompt (`Escribe el dia de la semana que quieres ${listaDias}`);
     switch (elegirDia) {
-            case "lunes": 
-        horario=  Number (prompt ("Los dias lunes podemos de 8 a 20 hs, escribe una hora"));
-        break;
-            case "martes": 
-        horario= Number (prompt ("Los dias martes podemos de 8 a 20 hs, escribe una hora"));
-        break;
-            case "miercoles": 
-        horario= Number (prompt ("Los dias miercoles podemos de 8 a 20 hs, escribe una hora"));
-        break;
-            case "jueves": 
-        horario= Number (prompt ("Los dias jueves podemos de 8 a 20 hs, escribe una hora"));
-        break;
-            case "viernes": 
-        horario= Number (prompt ("Los dias viernes podemos de 8 a 20 hs, escribe una hora"));
-        break;
+        case "lunes": 
+        elegirHorario= parseInt (
+    prompt (`Los dias lunes tenemos estos turnos ${horario.join ("-")} hs. Escribe un horario`));
+    break;
+        case "martes": 
+        elegirHorario= parseInt (
+        prompt (`Los dias martes tenemos estos turnos ${horario.join ("-")} hs. Escribe un horario`));
+    break;
+        case "miercoles": 
+        elegirHorario= parseInt (
+        prompt (`Los dias miercoles tenemos estos turnos ${horario.join ("-")} hs. Escribe un horario`));
+    break;
+        case "jueves": 
+        elegirHorario= parseInt (
+        prompt (`Los dias jueves tenemos estos turnos ${horario.join ("-")} hs. Escribe un horario`));
+    break;
+        case "viernes": 
+        elegirHorario= parseInt (
+        prompt (`Los dias viernes tenemos estos turnos ${horario.join ("-")} hs. Escribe un horario`));
+    break;
             
         default:
             elegirDia= prompt("Ese dia no atendemos");
@@ -284,13 +305,13 @@ function punciones () {
     
             }
     
-            if (horario > 20) {
+            if (elegirHorario > 20) {
                 alert("Ese horario esta fuera de nuestro rango de atencion");
                 horario();}
-            else if (horario <8) {alert("Ese horario esta fuera de nuestro rango de atencion");
+            else if (elegirHorario <8) {alert("Ese horario esta fuera de nuestro rango de atencion");
                 horario();}
             
-alert (`Tu turno es el dia ${elegirDia} a las ${horario} hs.`);
+alert (`Tu turno es el dia ${elegirDia} a las ${elegirHorario} hs.`);
             opcionesPrincipales();  
     }
     
@@ -302,34 +323,39 @@ function densitometria () {
     for (const element of diasSemana) { listaDias += element.dia + "\n";}
     const elegirDia= prompt (`Escribe el dia de la semana que quieres ${listaDias}`);
     switch (elegirDia) {
-            case "lunes": 
-        horario=  Number (prompt ("Los dias lunes podemos de 8 a 20 hs, escribe una hora"));
-        break;
-            case "martes": 
-        horario= Number (prompt ("Los dias martes podemos de 8 a 20 hs, escribe una hora"));
-        break;
-            case "miercoles": 
-        horario= Number (prompt ("Los dias miercoles podemos de 8 a 20 hs, escribe una hora"));
-        break;
-            case "jueves": 
-        horario= Number (prompt ("Los dias jueves podemos de 8 a 20 hs, escribe una hora"));
-        break;
-            case "viernes": 
-        horario= Number (prompt ("Los dias viernes podemos de 8 a 20 hs, escribe una hora"));
-        break;
+        case "lunes": 
+        elegirHorario= parseInt (
+    prompt (`Los dias lunes tenemos estos turnos ${horario.join ("-")} hs. Escribe un horario`));
+    break;
+        case "martes": 
+        elegirHorario= parseInt (
+        prompt (`Los dias martes tenemos estos turnos ${horario.join ("-")} hs. Escribe un horario`));
+    break;
+        case "miercoles": 
+        elegirHorario= parseInt (
+        prompt (`Los dias miercoles tenemos estos turnos ${horario.join ("-")} hs. Escribe un horario`));
+    break;
+        case "jueves": 
+        elegirHorario= parseInt (
+        prompt (`Los dias jueves tenemos estos turnos ${horario.join ("-")} hs. Escribe un horario`));
+    break;
+        case "viernes": 
+        elegirHorario= parseInt (
+        prompt (`Los dias viernes tenemos estos turnos ${horario.join ("-")} hs. Escribe un horario`));
+    break;
             
         default:
             elegirDia= prompt("Ese dia no atendemos");
             break;
     }
     
-            if (horario > 20) {
+            if (elegirHorario > 20) {
                 alert("Ese horario esta fuera de nuestro rango de atencion");
                 horario();}
-            else if (horario <8) {alert("Ese horario esta fuera de nuestro rango de atencion");
+            else if (elegirHorario <8) {alert("Ese horario esta fuera de nuestro rango de atencion");
                 horario();}
 
        
-alert (`Tu turno es el dia ${elegirDia} a las ${horario} hs.`);
+alert (`Tu turno es el dia ${elegirDia} a las ${elegirHorario} hs.`);
             opcionesPrincipales();  
 }
