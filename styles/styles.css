@@ -26,7 +26,7 @@ h1,
 h2 {
   color: #525099;
   font-family: "Tajawal", sans-serif;
-  font-size: 1.5em;
+  font-size: 1.7em;
   font-weight: 900;
   text-align: center;
   margin-top: 10%;
@@ -39,6 +39,7 @@ li {
   text-align: justify;
   font-size: 1.2em;
   list-style: none;
+  margin-top: 10%;
 }
 
 .logo {
@@ -60,14 +61,311 @@ li {
   text-align: center;
 }
 
+footer {
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contenedor_boton {
+  text-align: center;
+  margin-top: 15%;
+  margin-bottom: 15%;
+}
+
 .boton_turnos {
-  color: #A8518A;
+  color: #FEF8F6;
   font-size: 1.5em;
   border: 2px solid #A8518A;
   font-family: "Tajawal", sans-serif;
   padding: 10px 25px;
   border-radius: 40px;
-  background-color: transparent;
+  background-color: #A8518A;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.curva {
+  position: relative;
+  background: #FAC9FF;
+  height: 10px;
+  margin-top: 20%;
+}
+
+.wave {
+  position: absolute;
+  height: 40px;
+  width: 100%;
+  background: #FAC9FF;
+  bottom: 0;
+}
+
+.wave::before, .wave::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+}
+
+.wave::before {
+  width: 55%;
+  height: 109%;
+  background-color: #fff;
+  right: -1.5%;
+  top: 60%;
+}
+
+.wave::after {
+  width: 55%;
+  height: 100%;
+  background-color: #FAC9FF;
+  left: -1.5%;
+  top: 40%;
+}
+
+.img_icono {
+  text-align: center;
+  margin: 10%;
+}
+.img_icono img {
+  width: 20%;
+}
+
+.contacto {
+  width: 80%;
+  margin: auto;
+}
+.contacto h3 {
+  font-size: 1.1em;
+  color: #A8518A;
+  margin-top: 20%;
+  text-align: center;
+}
+.contacto p {
+  text-align: center;
+  color: #A8518A;
+  font-size: 1em;
+  margin: 3%;
+}
+
+@media (min-width: 900px) {
+  .contenedor_boton {
+    width: 50%;
+    margin: 10% auto;
+  }
+  .boton_turnos {
+    font-size: 2.5em;
+    padding: 10px 25px;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  h1 {
+    font-size: 3em;
+  }
+  h2 {
+    font-size: 2.7em;
+  }
+  h2 li {
+    font-size: 2em;
+  }
+  p {
+    font-size: 2em;
+  }
+  .contacto h3 {
+    font-size: 2.5em;
+  }
+  .contacto p {
+    font-size: 1.8em;
+  }
+  .copy {
+    font-size: 0.9em;
+  }
+  footer {
+    text-align: center;
+  }
+  .wave {
+    height: 150px;
+  }
+}
+/*    SECCION INGRESO  */
+.ingreso,
+.registro {
+  background-color: #A8518A;
+  width: 95%;
+  height: 280px;
+  margin: auto;
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.ingreso p,
+.registro p {
+  color: #fff;
+  justify-content: center;
+  font-size: 1em;
+}
+.ingreso input,
+.registro input {
+  width: 95%;
+  padding: 6px 12px;
+  margin: 6px;
+}
+.ingreso button,
+.registro button {
+  width: 40%;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  color: #525099;
+  background-color: #fff;
+  border: #fff;
+}
+
+@media (min-width: 900px) {
+  .ingreso,
+.registro {
+    height: 300px;
+    margin-top: 3%;
+  }
+  .ingreso p,
+.registro p {
+    font-size: 1.5em;
+    margin-top: 0;
+  }
+  .ingreso button,
+.registro button {
+    width: 30%;
+    padding: 10px 15px;
+  }
+  #btn_menu {
+    display: none;
+  }
+  footer {
+    margin-top: 7%;
+  }
+}
+/* SECCION REGISTRO USUARIO*/
+.regis {
+  width: 95%;
+  margin: auto;
+}
+
+.register {
+  width: 95%;
+  background-color: #A8518A;
+  height: 900px;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.register p {
+  color: #fff;
+  font-size: 1em;
+  justify-content: center;
+  width: 90%;
+}
+.register h1 {
+  font-size: 1.8em;
+  color: #fff;
+}
+.register h2 {
+  color: #FEF8F6;
+  font-size: 1.2em;
+  margin-right: auto;
+  margin-left: 3%;
+}
+.register input {
+  width: 95%;
+  margin: 1%;
+  padding: 6px 12px;
+}
+.register button {
+  width: 40%;
+  margin-top: 35px;
+  margin-bottom: 20px;
+  color: #525099;
+  background-color: #fff;
+  border: #fff;
+}
+
+@media (min-width: 900px) {
+  .register {
+    height: 800px;
+    margin-top: 2%;
+  }
+  .register h1 {
+    font-size: 2.5em;
+    margin-top: 0;
+  }
+  .register p {
+    font-size: 1.2em;
+    margin-top: 55px;
+  }
+  .register h2 {
+    margin-top: 2%;
+    font-size: 1.7em;
+  }
+  .register input {
+    margin: 5px;
+  }
+  .register button {
+    width: 30%;
+    padding: 10px 15px;
+  }
+  #btn_menu {
+    display: none;
+  }
+  footer {
+    margin-top: 7%;
+  }
+}
+/*   seccion turnos*/
+.turnos {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  height: 140px;
+  border: 3px solid #525099;
+  margin-left: auto;
+  margin-right: auto;
+}
+.turnos li {
+  flex-direction: row;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 1.3em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.radiolist input[type=radio] {
+  display: none;
+}
+
+.radiolist label {
+  color: #525099;
+  position: relative;
+  font-size: 1.3em;
+  padding: 10px 15px 10px 50px;
+  cursor: pointer;
+  display: flex;
+}
+.radiolist label::before {
+  content: "";
+  width: 17px;
+  height: 17px;
+  background-color: none;
+  border: 3px solid #525099;
+  border-radius: 50%;
+  position: absolute;
+  left: 17px;
+  top: 20px;
 }
 
 /*# sourceMappingURL=styles.css.map */
