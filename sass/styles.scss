@@ -56,6 +56,7 @@ margin-top: 15%;
 margin-bottom: 15%;}
 
 .boton_turnos {color: #FEF8F6 ;
+    text-decoration: none;
 font-size: 1.5em;
 border: 2px solid #A8518A;
 font-family: 'Tajawal', sans-serif;
@@ -168,8 +169,18 @@ align-items: center;
     input {width: 95%;
     padding: 6px 12px;
     margin:6px };
-
+    .boton_registro {width: 40%;
+        text-decoration: none;
+        text-align: center;
+        background-color: #fff;
+        margin-top: 35px;
+    margin-bottom: 20px;
+    color: #525099;
+    border: #fff;}
     }
+    .copy {
+    font-size: 0.7em;}
+    footer {text-align: center;}
 
 @media (min-width: 900px) {
     .ingreso,
@@ -215,23 +226,25 @@ align-items: center;
 justify-content: center;
 width: 90%;};
     h1 {font-size: 1.8em;
-    color: #fff;}
+    color: #fff;};
     h2 {
-    color: #FEF8F6;
-font-size: 1.2em;
-margin-right: auto;
-margin-left: 3%;};
+        color: #FEF8F6;
+    font-size: 1.2em;
+text-align: left;
+margin-left: 3%};
 input {width: 95%;
 margin: 1%;
 padding: 6px 12px;};
 .boton_registro {width: 40%;
     text-decoration: none;
+    text-align: center;
     background-color: #fff;
     margin-top: 35px;
 margin-bottom: 20px;
 color: #525099;
-background-color: #fff;
-border: #fff;}
+border: #fff;
+}
+
 }
 
 @media (min-width: 900px) {
@@ -245,7 +258,8 @@ border: #fff;}
         font-size:1.7em ;}
         input {margin: 5px;}
         .boton_registro {width: 30%;
-            padding: 7px 15px;}
+            padding: 7px 15px;
+}
     }
 
     #btn_menu {display: none;}
@@ -254,34 +268,48 @@ border: #fff;}
 }
 
 /*   seccion turnos*/
-p {font-size: 1.5em;}
-.turnos {display: flex;
-width: 100%;
-justify-content: center;
-text-align: center;
+.turnero {width: 90%;
+    height: 500px;
+background-color: #A8518A;
 margin-left: auto;
 margin-right: auto;
-    li {flex-direction: row;
-    padding-left: 25px;
-    padding-right: 25px;
+
+    input{margin-top: 15px;
+    margin-bottom: 15px;
+width:60%;
+margin-left: 10px;}
+#opciones {margin-left: 3%;}}
+
+p {font-size: 2em;
+text-align: center;
+color: #fff;
+text-align: left;
+margin-left: 3%;}
+#obraSocial {margin: auto;}
+.turnos {display: flex;
+width: 90%;
+justify-content: center;
+text-align: center;
+margin: 10% auto;
+
+    li {background-color: #FAC9FF;
+justify-content: center;
+text-align: center;
+align-items: center;
     font-size: 1.3em;
-    margin-left: auto;
-    margin-right: auto;
+    font-weight: 800;
+    padding: 10px;
+    margin: auto;
 }}
 
-.radiolist input[type="radio"] {display: none;}
-.radiolist label {color: #525099;
-position: relative;
-font-size: 1.3em;
-padding: 10px 15px 10px 50px;
-cursor: pointer;
-display: flex;
-        &::before {content: "";
-        width: 17px;
-    height: 17px;
-background-color: none;
-border: 3px solid #525099;
-border-radius: 50%;
-position: absolute;
-left: 17px;
-top: 20px;}}
+@media (min-width: 900px) {
+
+    p {font-size: 3em;
+}
+    .turnero {input {width: 30%;};
+#opciones {width: 20%;}}
+    .turnos{
+    li {font-size: 2.2em;
+        margin-top: 10px;}}
+}
+
