@@ -42,10 +42,6 @@ li {
   margin-top: 10%;
 }
 
-.logo {
-  width: 200px;
-}
-
 .carousel_slider {
   width: 100%;
 }
@@ -83,6 +79,11 @@ footer {
   background-color: #A8518A;
   margin-left: 2%;
   margin-right: 2%;
+}
+.boton_turnos:hover {
+  color: #fff;
+  background-color: #525099;
+  border-color: #525099;
 }
 
 .curva {
@@ -153,23 +154,30 @@ footer {
     width: 50%;
     margin: 10% auto;
   }
+  #descript_info p {
+    font-size: 2.5em;
+    margin: 30px;
+  }
+  #descript_info li {
+    font-size: 2.7em;
+    margin-top: 20px;
+  }
   .boton_turnos {
     font-size: 2.5em;
     padding: 10px 25px;
     margin-left: 2%;
     margin-right: 2%;
+    text-decoration: none;
   }
   h1 {
-    font-size: 3em;
+    font-size: 3.5em;
   }
   h2 {
-    font-size: 2.7em;
-  }
-  h2 li {
-    font-size: 2em;
+    font-size: 3.2em;
+    margin-bottom: 30px;
   }
   p {
-    font-size: 2em;
+    font-size: 3.5em;
   }
   .contacto h3 {
     font-size: 2.5em;
@@ -179,6 +187,7 @@ footer {
   }
   .copy {
     font-size: 0.9em;
+    text-align: center;
   }
   footer {
     text-align: center;
@@ -212,15 +221,6 @@ footer {
   padding: 6px 12px;
   margin: 6px;
 }
-.ingreso button,
-.registro button {
-  width: 40%;
-  margin-top: 5px;
-  margin-bottom: 20px;
-  color: #525099;
-  background-color: #fff;
-  border: #fff;
-}
 
 @media (min-width: 900px) {
   .ingreso,
@@ -233,10 +233,19 @@ footer {
     font-size: 1.5em;
     margin-top: 0;
   }
-  .ingreso button,
-.registro button {
-    width: 30%;
-    padding: 10px 15px;
+  .ingreso .boton_registro,
+.registro .boton_registro {
+    width: 300px;
+    height: 30px;
+    text-decoration: none;
+    background-color: #fff;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    color: #525099;
+    background-color: #fff;
+    border: #fff;
+    text-align: center;
+    justify-content: center;
   }
   #btn_menu {
     display: none;
@@ -284,8 +293,10 @@ footer {
   margin: 1%;
   padding: 6px 12px;
 }
-.register button {
+.register .boton_registro {
   width: 40%;
+  text-decoration: none;
+  background-color: #fff;
   margin-top: 35px;
   margin-bottom: 20px;
   color: #525099;
@@ -295,7 +306,7 @@ footer {
 
 @media (min-width: 900px) {
   .register {
-    height: 800px;
+    height: 1000px;
     margin-top: 2%;
   }
   .register h1 {
@@ -313,9 +324,9 @@ footer {
   .register input {
     margin: 5px;
   }
-  .register button {
+  .register .boton_registro {
     width: 30%;
-    padding: 10px 15px;
+    padding: 7px 15px;
   }
   #btn_menu {
     display: none;
@@ -325,20 +336,22 @@ footer {
   }
 }
 /*   seccion turnos*/
+p {
+  font-size: 1.5em;
+}
+
 .turnos {
   display: flex;
   width: 100%;
   justify-content: center;
   text-align: center;
-  height: 140px;
-  border: 3px solid #525099;
   margin-left: auto;
   margin-right: auto;
 }
 .turnos li {
   flex-direction: row;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
   font-size: 1.3em;
   margin-left: auto;
   margin-right: auto;
