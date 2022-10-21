@@ -1,4 +1,4 @@
-const horario= [8,9,10,11,12,13,14,15,16,17,18,19,20];
+/*const horario= [8,9,10,11,12,13,14,15,16,17,18,19,20];
 const diasSemana= [
     {nro:1, dia: "lunes", hora: [horario]},
     {nro:2, dia: "martes",hora: [horario]},
@@ -358,4 +358,4 @@ function densitometria () {
        
 alert (`Tu turno es el dia ${elegirDia} a las ${elegirHorario} hs.`);
             opcionesPrincipales();  
-}
+}*/

@@ -1,8 +1,9 @@
-const nombreUser= localStorage.getItem("user");
-const password= localStorage.getItem("password");
+const nombreUser= JSON.parse(localStorage.getItem("user"));
+const password= JSON.parse(localStorage.getItem("password"));
+const dniRegistro=JSON.parse(localStorage.getItem("dni"));
+const contrasenaRegistro=JSON.parse(localStorage.getItem("password"));
 
-
-    function ingreso() {
+    function Ingreso() {
         const nombreUser= localStorage.getItem("nombreUser");
         const password= localStorage.getItem("password");
         while ((nombreUser === dniRegistro) && (password === contrasenaRegistro))
@@ -15,6 +16,9 @@ const password= localStorage.getItem("password");
             spanPassword.style.color= "red";
         }
         else 
+        {let ingresar= document.getElementById("ingresar");
+        ingresar.addEventListener ("click",Ingreso())
+    };
     }
 
 
