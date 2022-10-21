@@ -8,18 +8,20 @@
     box-sizing: border-box;
 }
 
-body { background-color: #FEF8F6;}
+body { background:url(../img/fondoacuarela.jpg) no-repeat fixed;
+object-fit: cover;}
 
 #descript_info {width: 80%;
     margin-left: auto;
     margin-right: auto;
-}
+    p{font-size: 1.4em;
+        @include estilos_general;
+        text-align: justify;
+        margin-top: 10%;
+        }
+    }
 
-p {@include estilos_general;
-font-size: 1.2em;
-text-align: justify;
-margin-top: 10%;
-}
+
 
 h1,
 h2 {@include estilos_general;
@@ -32,16 +34,20 @@ margin-top: 10%;
 }
 li {@include estilos_general;
 text-decoration: none;
-text-align: justify;
-font-size: 1.2em;
+text-align: center;
+font-size: 1.4em;
 list-style: none;
-margin-top: 10%;
+margin-top: 5%;
 
 }
 
 
-.carousel_slider {width: 100%;
-img {width: 100%;}}
+.banner {width: 100%;
+#img {width: 100%;}
+#png {width: 60px;
+top: 0;
+left: 0;
+position:fixed;}}
 
 .copy {@include estilos_general;
 font-size: 0.8em;
@@ -52,8 +58,8 @@ margin-left: auto;
 margin-right: auto;}
 
 .contenedor_boton {text-align: center;
-margin-top: 15%;
-margin-bottom: 15%;}
+margin-top: 10%;
+margin-bottom: 10%;}
 
 .boton_turnos {color: #FEF8F6 ;
     text-decoration: none;
@@ -77,36 +83,7 @@ margin-right: 2%;
     margin-top: 20%;
   }
   
-  .wave {
-    position: absolute;
-    height: 40px;
-    width: 100%;
-    background: #FAC9FF;
-    bottom: 0;
-  }
-  
-  .wave::before, .wave::after {
-    content: "";
-    display: block;
-    position: absolute;
-    border-radius: 100% 50%;
-  }
-  
-  .wave::before {
-    width: 55%;
-    height: 109%;
-    background-color: #fff;
-    right: -1.5%;
-    top: 60%;
-  }
-  .wave::after {
-    width: 55%;
-    height: 100%;
-    background-color: #FAC9FF;
-    left: -1.5%;
-    top: 40%;
-  }
-
+ 
 .img_icono { text-align: center;
     margin: 10%;
     img {width: 20%;}
@@ -114,7 +91,7 @@ margin-right: 2%;
 
 .contacto {width: 80%;
 margin: auto;
-    h3 {font-size: 1.1em;
+    h3 {font-size: 1.4em;
     color:#A8518A;
 margin-top: 20%;
 text-align: center;}
@@ -124,14 +101,15 @@ font-size: 1em;
 margin: 3%;}}
 
 @media (min-width: 900px) {
+
     .contenedor_boton {width: 50%;
-margin: 10% auto}
-#descript_info {p {font-size: 2.5em;
-                    margin: 30px;}
+margin: 5% auto}
+#descript_info {p {font-size: 2em;
+                    margin: 20px;}
                     li {font-size:2.7em;
                     margin-top: 20px;}}
     .boton_turnos {
-        font-size: 2.5em;
+        font-size: 3em;
         padding: 10px 25px;
         margin-left: 2%;
         margin-right: 2%;
@@ -141,14 +119,13 @@ margin: 10% auto}
         h2 {font-size: 3.2em;
            margin-bottom: 30px;
         }
-        p {font-size: 3.5em;}
+        p {font-size: 3em;}
         .contacto { h3 {font-size: 2.5em;};
                     p {font-size: 1.8em;}}
 
-        .copy {font-size: 0.9em;
-        text-align: center;}
-        footer {text-align: center;}
-        .wave {height: 150px;}
+        footer {text-align: center;
+            font-size: 1.3em;}
+
 }
 
     /*    SECCION INGRESO  */
@@ -273,27 +250,29 @@ border: #fff;
 background-color: #A8518A;
 margin-left: auto;
 margin-right: auto;
+p {font-size: 2em;
+    text-align: left;
+    margin-left: 3%;
+color: #FEF8F6;}
 
     input{margin-top: 15px;
     margin-bottom: 15px;
-width:60%;
-margin-left: 10px;}
-#opciones {margin-left: 3%;}}
+    margin-left: 3%;}
+#opciones {margin-left: 3%;}
+}
 
-p {font-size: 2em;
-text-align: center;
-color: #fff;
-text-align: left;
-margin-left: 3%;}
+
 #obraSocial {margin: auto;}
 .turnos {display: flex;
 width: 90%;
 justify-content: center;
 text-align: center;
 margin: 10% auto;
+background-color: #FEF8F6;
 
-    li {background-color: #FAC9FF;
+    li {
 justify-content: center;
+text-decoration: none;
 text-align: center;
 align-items: center;
     font-size: 1.3em;
@@ -301,15 +280,19 @@ align-items: center;
     padding: 10px;
     margin: auto;
 }}
+.check {width: 30%;
+label {color: black;
+font-weight: 700;}}
 
 @media (min-width: 900px) {
 
-    p {font-size: 3em;
-}
+    p {font-size: 3em;}
     .turnero {input {width: 30%;};
-#opciones {width: 20%;}}
-    .turnos{
-    li {font-size: 2.2em;
-        margin-top: 10px;}}
+#opciones {width: 20%;}
 }
+    .turnos{margin-top: 10%;
+    li {font-size: 2.2em;
+        margin-top: 10px;}
+        }
+    }
 

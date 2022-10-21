@@ -5,7 +5,8 @@
 }
 
 body {
-  background-color: #FEF8F6;
+  background: url(../img/fondoacuarela.jpg) no-repeat fixed;
+  object-fit: cover;
 }
 
 #descript_info {
@@ -13,11 +14,10 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-
-p {
+#descript_info p {
+  font-size: 1.4em;
   color: #525099;
   font-family: "Tajawal", sans-serif;
-  font-size: 1.2em;
   text-align: justify;
   margin-top: 10%;
 }
@@ -36,17 +36,23 @@ li {
   color: #525099;
   font-family: "Tajawal", sans-serif;
   text-decoration: none;
-  text-align: justify;
-  font-size: 1.2em;
+  text-align: center;
+  font-size: 1.4em;
   list-style: none;
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
-.carousel_slider {
+.banner {
   width: 100%;
 }
-.carousel_slider img {
+.banner #img {
   width: 100%;
+}
+.banner #png {
+  width: 60px;
+  top: 0;
+  left: 0;
+  position: fixed;
 }
 
 .copy {
@@ -65,8 +71,8 @@ footer {
 
 .contenedor_boton {
   text-align: center;
-  margin-top: 15%;
-  margin-bottom: 15%;
+  margin-top: 10%;
+  margin-bottom: 10%;
 }
 
 .boton_turnos {
@@ -94,37 +100,6 @@ footer {
   margin-top: 20%;
 }
 
-.wave {
-  position: absolute;
-  height: 40px;
-  width: 100%;
-  background: #FAC9FF;
-  bottom: 0;
-}
-
-.wave::before, .wave::after {
-  content: "";
-  display: block;
-  position: absolute;
-  border-radius: 100% 50%;
-}
-
-.wave::before {
-  width: 55%;
-  height: 109%;
-  background-color: #fff;
-  right: -1.5%;
-  top: 60%;
-}
-
-.wave::after {
-  width: 55%;
-  height: 100%;
-  background-color: #FAC9FF;
-  left: -1.5%;
-  top: 40%;
-}
-
 .img_icono {
   text-align: center;
   margin: 10%;
@@ -138,7 +113,7 @@ footer {
   margin: auto;
 }
 .contacto h3 {
-  font-size: 1.1em;
+  font-size: 1.4em;
   color: #A8518A;
   margin-top: 20%;
   text-align: center;
@@ -153,18 +128,18 @@ footer {
 @media (min-width: 900px) {
   .contenedor_boton {
     width: 50%;
-    margin: 10% auto;
+    margin: 5% auto;
   }
   #descript_info p {
-    font-size: 2.5em;
-    margin: 30px;
+    font-size: 2em;
+    margin: 20px;
   }
   #descript_info li {
     font-size: 2.7em;
     margin-top: 20px;
   }
   .boton_turnos {
-    font-size: 2.5em;
+    font-size: 3em;
     padding: 10px 25px;
     margin-left: 2%;
     margin-right: 2%;
@@ -178,7 +153,7 @@ footer {
     margin-bottom: 30px;
   }
   p {
-    font-size: 3.5em;
+    font-size: 3em;
   }
   .contacto h3 {
     font-size: 2.5em;
@@ -186,15 +161,9 @@ footer {
   .contacto p {
     font-size: 1.8em;
   }
-  .copy {
-    font-size: 0.9em;
-    text-align: center;
-  }
   footer {
     text-align: center;
-  }
-  .wave {
-    height: 150px;
+    font-size: 1.3em;
   }
 }
 /*    SECCION INGRESO  */
@@ -363,21 +332,18 @@ footer {
   margin-left: auto;
   margin-right: auto;
 }
+.turnero p {
+  font-size: 2em;
+  text-align: left;
+  margin-left: 3%;
+  color: #FEF8F6;
+}
 .turnero input {
   margin-top: 15px;
   margin-bottom: 15px;
-  width: 60%;
-  margin-left: 10px;
-}
-.turnero #opciones {
   margin-left: 3%;
 }
-
-p {
-  font-size: 2em;
-  text-align: center;
-  color: #fff;
-  text-align: left;
+.turnero #opciones {
   margin-left: 3%;
 }
 
@@ -391,16 +357,25 @@ p {
   justify-content: center;
   text-align: center;
   margin: 10% auto;
+  background-color: #FEF8F6;
 }
 .turnos li {
-  background-color: #FAC9FF;
   justify-content: center;
+  text-decoration: none;
   text-align: center;
   align-items: center;
   font-size: 1.3em;
   font-weight: 800;
   padding: 10px;
   margin: auto;
+}
+
+.check {
+  width: 30%;
+}
+.check label {
+  color: black;
+  font-weight: 700;
 }
 
 @media (min-width: 900px) {
@@ -412,6 +387,9 @@ p {
   }
   .turnero #opciones {
     width: 20%;
+  }
+  .turnos {
+    margin-top: 10%;
   }
   .turnos li {
     font-size: 2.2em;
