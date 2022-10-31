@@ -89,8 +89,9 @@ margin-right: 2%;
     img {width: 20%;}
 }
 
-.contacto {width: 80%;
+.contacto {width: 100%;
 margin: auto;
+background-color: #fff;
     h3 {font-size: 1.4em;
     color:#A8518A;
 margin-top: 20%;
@@ -135,7 +136,7 @@ margin: 5% auto}
 width: 95%;
 height: 280px;
 margin: auto;
-margin-top: 10%;
+margin-top: 20%;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -162,7 +163,7 @@ align-items: center;
 @media (min-width: 900px) {
     .ingreso,
     .registro {height: 300px;
-        margin-top: 3%;
+        margin-top: 7%;
 
         p{font-size: 1.5em;
         margin-top: 0;}
@@ -187,11 +188,12 @@ align-items: center;
 
 /* SECCION REGISTRO USUARIO*/
 .regis {width: 95%;
-margin: auto;}
+margin: auto;
+}
 .register {width: 95%;
 background-color: #A8518A;
 height: 900px;
-margin-top: 10%;
+margin-top: 20%;
 margin-left: auto;
 margin-right: auto;
 display: flex;
@@ -211,7 +213,11 @@ text-align: left;
 margin-left: 3%};
 input {width: 95%;
 margin: 1%;
-padding: 6px 12px;};
+padding: 6px 12px;}
+
+
+
+}
 .boton_registro {width: 40%;
     text-decoration: none;
     text-align: center;
@@ -220,22 +226,23 @@ padding: 6px 12px;};
 margin-bottom: 20px;
 color: #525099;
 border: #fff;
-}
 
 }
 
 @media (min-width: 900px) {
     .register {height: 1000px;
-        margin-top: 2%;
+        margin-top: 7%;
         h1 {font-size: 2.5em;
         margin-top: 0;}
         p {font-size: 1.2em;
-        margin-top: 55px;}
+        margin-top: 55px;
+    text-align: center;}
         h2 {margin-top: 2%;
         font-size:1.7em ;}
         input {margin: 5px;}
         .boton_registro {width: 30%;
             padding: 7px 15px;
+            
 }
     }
 
@@ -245,40 +252,47 @@ border: #fff;
 }
 
 /*   seccion turnos*/
-.turnero {width: 90%;
+.turnero {width: 70%;
     height: 500px;
 background-color: #A8518A;
 margin-left: auto;
 margin-right: auto;
 p {font-size: 2em;
-    text-align: left;
-    margin-left: 3%;
+margin-left: 3%;
 color: #FEF8F6;}
 
     input{margin-top: 15px;
     margin-bottom: 15px;
-    margin-left: 3%;}
-#opciones {margin-left: 3%;}
+    justify-content: center;
+align-items: center;
+
+
+width: 90%;}
+#opciones {     margin-left: auto;
+    margin-right: auto;}
 }
+
 
 
 #obraSocial {margin: auto;}
 .turnos {display: flex;
 width: 90%;
 justify-content: center;
-text-align: center;
-margin: 10% auto;
+margin-left: auto;
+margin-right: auto;
+margin-top: 20%;
 background-color: #FEF8F6;
 
     li {
+        a{
 justify-content: center;
 text-decoration: none;
-text-align: center;
+
 align-items: center;
-    font-size: 1.3em;
+    font-size: 1.1em;
     font-weight: 800;
-    padding: 10px;
     margin: auto;
+color: #525099;}
 }}
 .check {width: 30%;
 label {color: black;
@@ -287,12 +301,15 @@ font-weight: 700;}}
 @media (min-width: 900px) {
 
     p {font-size: 3em;}
-    .turnero {input {width: 30%;};
+    .turnero {input {width: 30%;}
 #opciones {width: 20%;}
 }
     .turnos{margin-top: 10%;
-    li {font-size: 2.2em;
-        margin-top: 10px;}
-        }
-    }
+    li { 
+        font-size: 2.2em;
+        margin-top: 10px;
+    margin-left: auto;
+margin-right: auto;}
+
+}}
 

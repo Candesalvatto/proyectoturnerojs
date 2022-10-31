@@ -1,24 +1,75 @@
-const nombreUser= JSON.parse(localStorage.getItem("user"));
-const password= JSON.parse(localStorage.getItem("password"));
-const dniRegistro=JSON.parse(localStorage.getItem("dni"));
-const contrasenaRegistro=JSON.parse(localStorage.getItem("password"));
+let pacientes = [];
+const form = document.querySelector('.ingreso');
+let formState = false;
+console.log(form)
 
-    function Ingreso() {
-        const nombreUser= localStorage.getItem("nombreUser");
-        const password= localStorage.getItem("password");
-        while ((nombreUser === dniRegistro) && (password === contrasenaRegistro))
-        if (nombreUser != dniRegistro) {
-            const spanUser= document.getElementById("spanUser").innerHTML="El usuario es incorrecto";
-            spanUser.style.color="red";
-        }
-        else if (password != contrasenaRegistro) {
-            const spanPassword= document.getElementById("spanPassword").innerHTML= "La contraseña es incorrecta";
-            spanPassword.style.color= "red";
-        }
-        else 
-        {let ingresar= document.getElementById("ingresar");
-        ingresar.addEventListener ("click",Ingreso())
-    };
+const validateField = (arrayField) => {
+    
+    const result = arrayField.filter( field => field.value.trim().length === 0 );
+    if( result.length > 0){
+        formState = false;
+        Swal.fire({
+            icon: 'warning',
+            title: 'Uno o más campos están vacíos',
+            text: 'Por favor, revisa todos los campos antes de ingresar',
+          })
+    }else{
+        formState = true;
     }
+
+}
+
+
+function ingreso(dni, password) {
+
+
+    const result = pacientes.find( paciente => paciente.dni === dni );
+
+    if(result === undefined){
+        Swal.fire({
+            icon: 'warning',
+            title: 'Usuario Incorrecto',
+            text: 'El DNI ingresado no corresponde a un usuario.',
+          })
+    }
+
+
+
+    if( (result !== undefined) && (result.contrasena === password) ){
+
+        localStorage.setItem('user',JSON.stringify(result));
+
+        Swal.fire({
+            icon: 'success',
+            title: `Bienvenido ${result.nombre.toUpperCase()}`,
+            showConfirmButton: false,
+            footer: '<a href="/turnos.html">Ir a Turnos</a>'
+          })
+    }else if( (result !== undefined) ){
+        Swal.fire({
+            icon: 'error',
+            title: 'Contraseña incorrecta',
+          })
+    }
+}
+
+
+form.addEventListener('submit',(e)=>{
+    e.preventDefault();
+    validateField([ e.target[0],e.target[1] ]);
+
+    if ( formState === true ) {
+        ingreso(e.target[0].value.trim(),e.target[1].value.trim())
+    }
+
+});
+
+
+
+if(localStorage.getItem('pacientes')){
+    pacientes = JSON.parse(localStorage.getItem('pacientes'));
+    console.table( pacientes );
+}
+
 
 

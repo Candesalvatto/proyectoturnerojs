@@ -1,86 +1,106 @@
-
 class Paciente {
-    constructor (nombre, apellido, fechaNacimiento, dni, genero, email, contrasena,confContras){
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.fechaNacimiento = fechaNacimiento;
-        this.dni = dni;
-        this.genero= genero;
-        this.email= email;
-        this.contrasena= contrasena;
-        this.confContras= confContras;
-    }
+    constructor(id, nombre, apellido, dni, fechaNacimiento, genero, email, contrasena)
+ {
+    this.id = id;
+    this.nombre = nombre.trim();
+    this.apellido = apellido.trim();
+    this.fechaNacimiento = fechaNacimiento.trim();
+    this.dni = dni;
+    this.genero = genero.trim();
+    this.email = email.trim();
+    this.contrasena = contrasena.trim();
+    this.turnos =[];
+  }
 }
 
-const listaPatient= [];
+
+const formulario = document.querySelector("#registrarme");
+const invalidDisplay = document.querySelector("#invalidDisplay");
+let formState = false; 
+let passwordState = false; 
+let pacientes = [];
+
+const showErrorMessage = (msg) => {
+  invalidDisplay.innerText = msg;
+};
+
+const validationsFields = (dataForm) => {
+  const result = dataForm.filter((field) => field.value.trim().length === 0);
+
+  if (result.length > 0) {
+    console.log("uno de los campos esta vacio");
+    Swal.fire({
+        icon: 'warning',
+        title: 'Uno o más campos están vacíos',
+        text: 'Por favor, revisa todos los campos',
+      })
+    showErrorMessage("uno o más campos están vacíos");
+    formState = false;
+  } else {
+    console.log("ningun campo esta vacio");
+    formState = true;
+  }
+
+  if (dataForm[6].value === dataForm[7].value) {
+    console.log("las contrasenas son iguales");
+    passwordState = true;
+  } else {
+    console.error("las contrasenas son distintas");
+    passwordState = false;
+    showErrorMessage("las contraseñas no coinciden");
+  }
+};
 
 
-const Registro= ()=> {
-    let nombreRegistro = document.querySelector("#nombre").localStorage.setItem("nombreUser",nombreRegistro.value);
-    let apellidoRegistro = document.querySelector("#apellido").localStorage.setItem("apellidoUser",apellidoRegistro.value);
-    let nacimientoRegistro = document.querySelector ("#nacimiento").localStorage.setItem("fechaNac",nacimientoRegistro.value);
-    let dniRegistro = document.querySelector("#dni").localStorage.setItem("user",dniRegistro.value);
-    let genero = document.querySelector ("#genero").localStorage.setItem("genero",genero.value);
-    let email = document.querySelector ("#email").localStorage.setItem("email",email.value);
-    let contrasenaRegistro = document.querySelector("#contrasena").localStorage.setItem("password",contrasenaRegistro.value);
-    let confirmarContrasena = document.querySelector ("#confcontrasena").localStorage.setItem("passwordtrue",confirmarContrasena.value);
-    localStorage.setItem("paciente",JSON.stringify(Registro));
 
+formulario.addEventListener("submit", (e) => {
+  e.preventDefault();
+  console.log(e);
+  const arrayResponses = [
+    e.target[0],
+    e.target[1],
+    e.target[2],
+    e.target[3],
+    e.target[4],
+    e.target[5],
+    e.target[6],
+    e.target[7],
+  ];
 
-    let newPacient= new Paciente (nombreRegistro,apellidoRegistro,nacimientoRegistro,dniRegistro,genero,email,contrasenaRegistro,confContras);
-    console.log (Paciente);
-    alert (`Su nombre de usuario es ${dniRegistro.value} y su contraseña es ${contrasenaRegistro.value}`);
-    let idPaciente = 1012;
-    for (i=1012; i < 1214; i ++) {alert (`Tu numero de ID asignado es ${idPaciente}`);
-    break};
+  validationsFields(arrayResponses);
 
-    if (localStorage.getItem("pacient")== null){ listaPatient.push(newPacient);
-            localStorage.setItem("pacient", JSON.stringify(listaPatient));
-    }
-    else {    const datosGuardados= JSON.parse(localStorage.getItem("pacient"));
-            datosGuardados.push(newPacient);
-            localStorage.setItem("pacient", JSON.stringify(datosGuardados));
+  if (formState === true && passwordState === true) {
+    const newId = pacientes.length + 1;
 
-    }
+    const newPaciente = new Paciente(
+      newId,
+      e.target[0].value,
+      e.target[1].value,
+      e.target[2].value,
+      e.target[3].value,
+      e.target[4].value,
+      e.target[5].value,
+      e.target[6].value
+    );
+    console.log(newPaciente);
+    pacientes.push(newPaciente);
+
+    localStorage.setItem("pacientes", JSON.stringify(pacientes));
+      
+    Swal.fire({
+        icon: 'success',
+        title: `Felicidades ${newPaciente.nombre.toUpperCase()}`,
+        text: `Tu usuario fue registrado con éxito. Tu ID es:
+                ${newId}   
+        `,
+        showConfirmButton: false,
+        footer: '<a href="/turnos.html">Ir a Turnos</a>'
+    });
+
+  }
+});
+
+if (localStorage.getItem("pacientes")) {
+  pacientes = JSON.parse(localStorage.getItem("pacientes"));
 }
-const formulario= document.getElementById("registrarme");
-formulario.addEventListener('submit', (e) => {
-    e.preventDefault();
-    Registro();
-    localStorage.setItem("pacient", JSON.stringify(formulario));}
 
-nombreRegistro.onchange = ()=> {
-        if (nombreRegistro.value ==" ") {
-            let invalido= document.getElementById("invalid");
-            invalido.innerHTML= "Es necesario completar todos los campos";
-            invalido.style.color= "red";
-        }
-        else {console.log (nombreRegistro.value);}
-    };
-
-    apellidoRegistro.onchange = ()=> {
-        if (apellidoRegistro.value ==" ") {
-            let invalido= document.getElementById("invalid");
-            invalido.innerHTML= "Es necesario completar todos los campos";
-            invalido.style.color= "red";
-        }
-        else {console.log (apellidoRegistro.value);}
-    };
-
-    nacimientoRegistro.onchange = ()=> {
-        if (nacimientoRegistro.value ==" ") {
-            let invalido= document.getElementById("invalid");
-            invalido.innerHTML= "Es necesario completar todos los campos";
-            invalido.style.color= "red";
-        }
-        else {console.log (nacimientoRegistro.value);}
-    };
-
-    dniRegistro.onchange = ()=> {
-        if (dniRegistro.value ==" ") {
-            let invalido= document.getElementById("invalid");
-            invalido.innerHTML= "Es necesario completar todos los campos";
-            invalido.style.color= "red";
-        }
-        else {console.log (dniRegistro.value);}
-    };

@@ -20,7 +20,7 @@
   </div>
     <section >
         <ul class="turnos">
-          <li><a href="#">Reservar Turno </a></li>
+            <li><a href="#">Reservar Turno </a></li>
             <li><a href="./cancelarTurno.html">Cancelar Turno </a></li>
             <li><a href="./misTurnos.html">Ver mis Turnos</a> </li>
         </ul>
@@ -34,36 +34,11 @@
                 <option>Densitometría</option>
                 <option>Papanicolau y Videocolposcopía</option>
                 </select>
-                <p>Dia</p>
-                <select id="opciones">
-                <option>Lunes</option>
-                <option>Martes</option>
-                <option>Miercoles</option>
-                <option>Jueves</option>
-                <option>Viernes</option>
-                </select>
-                <p>Mes</p>
-                <select id="opciones">
-                <option>Enero</option>
-                <option>Febrero</option>
-                <option>Marzo</option>
-                <option>Abril</option>
-                <option>Mayo</option>
-                <option>Junio</option>
-                <option>Julio</option>
-                <option>Agosto</option>
-                <option>Septiembre</option>
-                <option>Octubre</option>
-                <option>Noviembre</option>
-                <option>Diciembre</option>
-                </select>
-                <p>Año</p>
-                <select id="opciones">
-                <option>2022</option>
-                <option>2023</option>
-                <option>2024</option>
-                <option>2025</option>
-                </select>
+                <p>Fecha</p>
+                <input type="datetime-local">
+                <p>Comentario</p>
+                <textarea  cols="45" rows="5" placeholder="Ingrese aquí su comentario"></textarea>
+
               </div>
         </div>
     </section>
@@ -76,7 +51,7 @@
 
 
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src=></script>
     </body>
     </html>
