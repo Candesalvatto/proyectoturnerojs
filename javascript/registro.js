@@ -13,28 +13,29 @@ class Paciente {
   }
 }
 
-
+//variables
 const formulario = document.querySelector("#registrarme");
 const invalidDisplay = document.querySelector("#invalidDisplay");
 let formState = false; 
 let passwordState = false; 
 let pacientes = [];
 
+//funcion de msj de error
 const showErrorMessage = (msg) => {
   invalidDisplay.innerText = msg;
 };
-
+//funcion para valirdar registro
 const validationsFields = (dataForm) => {
   const result = dataForm.filter((field) => field.value.trim().length === 0);
 
   if (result.length > 0) {
-    console.log("uno de los campos esta vacio");
+    console.log("Uno de los campos esta vacio");
     Swal.fire({
         icon: 'warning',
         title: 'Uno o más campos están vacíos',
         text: 'Por favor, revisa todos los campos',
       })
-    showErrorMessage("uno o más campos están vacíos");
+    showErrorMessage("Uno o más campos están vacíos");
     formState = false;
   } else {
     console.log("ningun campo esta vacio");
@@ -42,16 +43,16 @@ const validationsFields = (dataForm) => {
   }
 
   if (dataForm[6].value === dataForm[7].value) {
-    console.log("las contrasenas son iguales");
+    console.log("Las contraseñas son iguales");
     passwordState = true;
   } else {
-    console.error("las contrasenas son distintas");
+    console.error("Las contraseñas son distintas");
     passwordState = false;
-    showErrorMessage("las contraseñas no coinciden");
+    showErrorMessage("Las contraseñas no coinciden");
   }
 };
 
-
+//evento formulario
 
 formulario.addEventListener("submit", (e) => {
   e.preventDefault();
