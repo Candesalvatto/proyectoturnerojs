@@ -375,10 +375,10 @@ footer {
   color: #525099;
 }
 
-.check {
+#check {
   width: 30%;
 }
-.check label {
+#check label {
   color: black;
   font-weight: 700;
 }
@@ -402,6 +402,9 @@ footer {
     margin-left: auto;
     margin-right: auto;
   }
+}
+#turnsViews {
+  font-size: 0.5em;
 }
 
 /*# sourceMappingURL=styles.css.map */

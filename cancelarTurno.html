@@ -27,7 +27,7 @@
         <div class="turnero">
             <form>
               <p>Ingrese su DNI</p>
-              <input type="text">
+              <input type="text" id="dniCancel">
               <p>Seleccione el turno que desea cancelar</p>
               <select id="opciones">
                 <option>Ecografías</option>
@@ -36,14 +36,14 @@
                 <option>Papanicolau y Videocolposcopía</option>
                 </select>
                 <p>¿Esta seguro que desea cancelar su turno?</p>
-                <div class="check">
+                <div id="check">
                 <input type="radio" id="true" name="calificacion" value="1" />
                 <label for="true" class="value1">SI</label> 
                 <input type="radio" id="false" name="calificacion" value="2" />
                 <label for="false" class="value2">NO</label> 
                 </div>
               <p id="alert"></p>
-              <input type="submit">
+              <input type="submit" id="send">
             </form>
         </div>
     </section>
@@ -56,7 +56,7 @@
 
 
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  
     <script src="javascript/cancelarTurno.js"></script>
     </body>
     </html>
