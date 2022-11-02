@@ -8,7 +8,7 @@
     box-sizing: border-box;
 }
 
-body { background:url(../img/fondoacuarela.jpg) no-repeat fixed;
+body { background:url(../img/fondoacuarela.webp) no-repeat fixed;
 object-fit: cover;}
 
 #descript_info {width: 80%;
@@ -143,7 +143,9 @@ justify-content: center;
 align-items: center;
     p{color: #fff;
     justify-content: center;
-    font-size: 1em};
+    font-size: 1em;
+margin-left: 10px;
+margin-right: 10px};
     input {width: 95%;
     padding: 6px 12px;
     margin:6px };
@@ -203,6 +205,8 @@ align-items: center;
     p{color: #fff;
     font-size: 1em;
 justify-content: center;
+margin-left: auto;
+margin-right: auto;
 width: 90%;};
     h1 {font-size: 1.8em;
     color: #fff;};
@@ -218,7 +222,7 @@ padding: 6px 12px;}
 
 
 }
-.boton_registro {width: 40%;
+button {width: 40%;
     text-decoration: none;
     text-align: center;
     background-color: #fff;
@@ -226,6 +230,7 @@ padding: 6px 12px;}
 margin-bottom: 20px;
 color: #525099;
 border: #fff;
+
 
 }
 
@@ -287,11 +292,11 @@ background-color: #FEF8F6;
         a{
 justify-content: center;
 text-decoration: none;
-
 align-items: center;
+text-align: center;
     font-size: 1.1em;
     font-weight: 800;
-    margin: auto;
+    margin:  auto 10px;
 color: #525099;}
 }}
 #check {width: 30%;
@@ -314,3 +319,40 @@ margin-right: auto;}
 }}
 
 #turnsViews {font-size: 0.5em;}
+
+.card-turno{
+    font-family: 'Tajawal', sans-serif;
+    max-width: 320px;
+    padding: 15px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: white;
+    
+    &__detail{
+        color: #1c1c1c !important;
+    }
+
+    &__delete{
+        background: #ef4444;
+        color: white;
+        padding: 9px 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        transition: all 250ms ease-in-out;
+        &:hover{
+            filter: brightness(120%);
+        }
+        &:active{
+            filter: brightness(140%);
+        }
+    }
+
+    .button-container{
+        margin-top: 10px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+}
