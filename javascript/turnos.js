@@ -1,9 +1,11 @@
 //valriables
 
-const dataTurnos = JSON.parse(localStorage.getItem("turnos")) || turnos; // (array)
+const dataTurnos = JSON.parse(localStorage.getItem("turnos")) || turnos; // array de  fechas de turnos 
 const dates = document.querySelector("#dates");
 const selectEspecialidad = document.querySelector("#opciones");
 const buttonSave = document.querySelector('#save');
+//const obraSocial= document.querySelector ("#obraSocial");
+//const coment= document.querySelector ("#coment");
 
 
 //opciones de fechas
@@ -18,7 +20,7 @@ const loadSelect = () =>
                 if(turno.disponible)
                 {
                     const opcion = document.createElement('option')
-                    opcion.value = turno.hora
+                    opcion.value = turno.fecha + " - " + turno.hora + "hs"
                     opcion.text = turno.fecha + " - " + turno.hora + "hs"
                     dates.add(opcion);
                 }
@@ -34,6 +36,8 @@ selectEspecialidad.addEventListener("change", loadSelect);
 buttonSave.addEventListener("click", ()=>{
     const especialidad = selectEspecialidad.value;
     const dateHour = dates.value;
+    const obraSocial = document.querySelector("obraSocial").value;
+    const coment= document.querySelector ("#coment").value;
 
     // actualizar data 
     dataTurnos.forEach(esp => {
@@ -54,10 +58,10 @@ buttonSave.addEventListener("click", ()=>{
     // guardar turno
     const turnosUser = JSON.parse(localStorage.getItem("turnos-user")) || [];
     const nuevoTurno = {
-        obraSocial: "",
+        obraSocial: obraSocial.value,
         especialidad:especialidad,
         hora: dateHour,
-        comentario:""
+        comentario:coment.value
     }
 
     turnosUser.push(nuevoTurno);

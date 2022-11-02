@@ -70,6 +70,8 @@ formulario.addEventListener("submit", (e) => {
 
   validationsFields(arrayResponses);
 
+ 
+
   if (formState === true && passwordState === true) {
     const newId = pacientes.length + 1;
 
