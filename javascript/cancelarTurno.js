@@ -9,9 +9,11 @@ const formulario = document.querySelector("#send");
 let cancelState = false; 
 
 
-    userTurns.forEach ((turnos) => {console.log(turnos)});
-    const cancelacion = pacient.filter(dni);     
-    console.log (cancelacion)
+pacient.forEach((paciente) => {console.log (paciente)});
+
+userTurns.forEach ((turnos) => {console.log(turnos)});
+    //const cancelacion = pacient.filter(dni);     
+   //console.log (cancelacion)
 
     /*const cancelTurn =()=> {
         const cancelacion = pacient.filter(dni);     
