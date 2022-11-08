@@ -299,6 +299,11 @@ button {
   border: #fff;
 }
 
+.content_button {
+  display: flex;
+  justify-content: center;
+}
+
 @media (min-width: 900px) {
   .register {
     height: 1000px;
@@ -334,24 +339,30 @@ button {
 /*   seccion turnos*/
 .turnero {
   width: 70%;
-  height: 500px;
+  height: auto;
   background-color: #A8518A;
   margin-left: auto;
   margin-right: auto;
+  width: 90%;
 }
 .turnero p {
   font-size: 2em;
   margin-left: 3%;
   color: #FEF8F6;
 }
+.turnero .styleForm {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
 .turnero input {
   margin-top: 15px;
   margin-bottom: 15px;
   justify-content: center;
   align-items: center;
-  width: 90%;
 }
-.turnero #opciones {
+
+#opciones {
   margin-left: auto;
   margin-right: auto;
 }
@@ -362,7 +373,7 @@ button {
 
 .turnos {
   display: flex;
-  width: 90%;
+  width: 80%;
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
@@ -370,7 +381,7 @@ button {
   background-color: #FEF8F6;
 }
 .turnos li a {
-  justify-content: center;
+  justify-content: space-between;
   text-decoration: none;
   align-items: center;
   text-align: center;
@@ -414,16 +425,18 @@ button {
 
 .card-turno {
   font-family: "Tajawal", sans-serif;
-  max-width: 320px;
+  margin: 20px auto;
+  width: 70%;
   padding: 15px;
   border-radius: 20px;
   overflow: hidden;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.671);
 }
 .card-turno__detail {
   color: #1c1c1c !important;
 }
 .card-turno__delete {
+  font-size: 1.5em;
   background: #ef4444;
   color: white;
   padding: 9px 16px;

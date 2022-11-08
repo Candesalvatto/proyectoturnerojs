@@ -47,7 +47,7 @@ function ingreso(dni, password) {
           })
     }else if( (result !== undefined) ){
         Swal.fire({
-            icon: 'error',
+            icon: 'error', 
             title: 'Contraseña incorrecta',
           })
     }
@@ -70,5 +70,7 @@ if(localStorage.getItem('pacientes')){
     pacientes = JSON.parse(localStorage.getItem('pacientes'));
     console.table( pacientes );
 }
+
+
 
 

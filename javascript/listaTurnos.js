@@ -25,7 +25,7 @@ const printTurns = () => {
         Recorda que tu obra social es ${turn.obraSocial.toUpperCase()} y deberás traer el carnet correspondiente para autorización.</br>
         Tu comentario: ${turn.comentario}. </br></p>
       <div class="button-container">
-        <button value="${turn.id}" class="card-turno__delete"> Cancelar </button>
+        <button value="${turn.id}" class="card-turno__delete"> Eliminar </button>
       </div>
   
       </div>

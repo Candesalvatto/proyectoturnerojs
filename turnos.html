@@ -24,10 +24,11 @@
   </div>
   <section>
     <ul class="turnos">
-      <li><a href="#">Reservar Turno </a></li>
-      <li><a href="./misTurnos.html">Ver mis Turnos</a> </li>
+      <li><a href="#">RESERVAR TURNO </a></li>
+      <li><a href="./misTurnos.html">VER MIS TURNOS</a> </li>
     </ul>
     <form class="turnero">
+      <div class="styleForm">
       <p>Obra social</p>
       <input type="text" id="obraSocial">
       <p>Estudio</p>
@@ -40,13 +41,15 @@
       <p>Fecha y hora</p>
       <select name="dates" id="dates"></select>
       <p>Comentario</p>
-      <textarea id="coment" cols="45" rows="5" placeholder="Ingrese aquí su comentario"></textarea>
-      <input type="button" value="RESERVAR TURNO" id="save" class="boton_registro">
+      <textarea id="coment" cols="45" rows="5" placeholder="Ingrese aquí su comentario"></textarea><br>
+      <button type="submit" value="RESERVAR TURNO" id="save" class="boton_registro">RESERVAR TURNO</button>
+    </div>
     </form>
   </section>
 
   <footer>
     <span class="copy">
+      <button type="submit" id="btn">CERRAR SESION</button><br>
       © Copyright 2022 Consultorio de la mujer | Servicio de diagnóstico por imágenes.
     </span>
   </footer>

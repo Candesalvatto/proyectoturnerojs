@@ -8,6 +8,7 @@ const selectEspecialidad = document.querySelector("#opciones");
 const buttonSave = document.querySelector('#save');
 const obraSocial = document.querySelector("#obraSocial");
 const coment= document.querySelector ("#coment");
+const closeSesion= document.querySelector("#btn");
 
 
 function verifiedLogin() {
@@ -98,4 +99,26 @@ buttonSave.addEventListener("click", ()=>{
     
     console.log("turno reservado");
 
-})
+});
+
+// cerrar sesion
+
+  /*const cerrarSesion = ()=> {
+    if(localStorage.getItem('user') == 1){ localStorage.removeItem("user");
+    console.log ("sesion cerrada");
+        Swal.fire({
+            icon: 'success',
+            title: "Sesion cerrada",
+            showConfirmButton: false,
+            footer: '<a href="/index.html">Inicio</a>'
+          })};
+
+/*closeSesion.onclick = ()=> {
+   cerrarSesion();
+}   
+
+
+closeSesion.addEventListener('click', (e)=>{
+    console.log("sesion cerrada");
+    cerrarSesion();
+  });*/

@@ -233,6 +233,12 @@ border: #fff;
 
 
 }
+.content_button {display: flex;
+justify-content: center;
+
+ 
+}
+
 
 @media (min-width: 900px) {
     .register {height: 1000px;
@@ -258,30 +264,37 @@ border: #fff;
 
 /*   seccion turnos*/
 .turnero {width: 70%;
-    height: 500px;
+    height: auto;
 background-color: #A8518A;
 margin-left: auto;
 margin-right: auto;
+
 p {font-size: 2em;
 margin-left: 3%;
-color: #FEF8F6;}
+color: #FEF8F6;
+}
+
+.styleForm {width: 50%;
+margin-left: auto;
+margin-right: auto;
+}
 
     input{margin-top: 15px;
     margin-bottom: 15px;
     justify-content: center;
 align-items: center;
-
+}
 
 width: 90%;}
 #opciones {     margin-left: auto;
     margin-right: auto;}
-}
+
 
 
 
 #obraSocial {margin: auto;}
 .turnos {display: flex;
-width: 90%;
+width: 80%;
 justify-content: center;
 margin-left: auto;
 margin-right: auto;
@@ -290,7 +303,7 @@ background-color: #FEF8F6;
 
     li {
         a{
-justify-content: center;
+justify-content: space-between;
 text-decoration: none;
 align-items: center;
 text-align: center;
@@ -321,18 +334,21 @@ margin-right: auto;}
 #turnsViews {font-size: 0.5em;}
 
 .card-turno{
+
     font-family: 'Tajawal', sans-serif;
-    max-width: 320px;
+    margin: 20px auto;
+    width: 70%;
     padding: 15px;
     border-radius: 20px;
     overflow: hidden;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.671);
     
     &__detail{
         color: #1c1c1c !important;
     }
 
     &__delete{
+        font-size: 1.5em;
         background: #ef4444;
         color: white;
         padding: 9px 16px;

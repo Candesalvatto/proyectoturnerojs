@@ -92,6 +92,8 @@ if (formState === true && passwordState === true) {
   pacientes.push(newPaciente);
 
   localStorage.setItem("pacientes", JSON.stringify(pacientes));
+
+
     
   Swal.fire({
       icon: 'success',
@@ -104,5 +106,28 @@ if (formState === true && passwordState === true) {
   });
 
 }
+});
+
+// api email 
+
+const btn = document.getElementById('button');
+
+
+formulario.addEventListener('submit', function(e) {
+   e.preventDefault();
+
+   btn.value = 'Enviando...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_czbpb7h';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Enviar email';
+      alert("Se ha enviado un mensaje a tu email como recordatorio de tu usuario");
+    }, (err) => {
+      btn.value = 'Enviar email';
+      alert(JSON.stringify(err));
+    });
 });
 
