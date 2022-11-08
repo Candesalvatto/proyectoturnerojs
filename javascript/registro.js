@@ -102,7 +102,7 @@ if (formState === true && passwordState === true) {
               ${newId}   
       `,
       showConfirmButton: false,
-      footer: '<a href="/ingreso.html">Ir a Login</a>'
+      footer: '<a href="./ingreso.html">Ir a Login</a>'
   });
 
 }
