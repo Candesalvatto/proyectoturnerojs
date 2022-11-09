@@ -1,21 +1,28 @@
-// varibles
-let viewTurns = JSON.parse(localStorage.getItem("turnos-user")) || []; 
+
+let viewTurns = JSON.parse(localStorage.getItem("turnos-user")) || [];
 const user = JSON.parse(localStorage.getItem("user"));
-let viewUserTurn = viewTurns.filter( turns => turns.paciente.dni === user.dni);
 const messageTurns = document.querySelector('#turnsViews');
 
-
-//funciones 
+ 
 const deleteTurn = (id) => {
 
-  const newArrayTurn = viewTurns.filter( turn => turn.id !== Number(id) ) 
-  viewUserTurn = newArrayTurn.filter( turns => turns.paciente.dni === user.dni);
-  localStorage.setItem('turnos-user', JSON.stringify(newArrayTurn));
-  messageTurns.innerHTML ='';
-  printTurns();
-  addEventInButtons();
+  if (viewTurns.length === 1) {
+    localStorage.removeItem('turnos-user');
+    messageTurns.innerHTML = '';
+  } else {
+    const newArrayTurn = viewTurns.filter(turn => turn.id !== Number(id))
+    viewUserTurn = newArrayTurn.filter(turns => turns.paciente.dni === user.dni);
+
+    localStorage.setItem('turnos-user', JSON.stringify(newArrayTurn));
+    messageTurns.innerHTML = '';
+    viewTurns = JSON.parse(localStorage.getItem("turnos-user")) || [];
+    printTurns();
+    addEventInButtons();
+  }
 
 }
+
+let viewUserTurn = viewTurns.filter(turns => turns.paciente.dni === user.dni);
 
 const printTurns = () => {
   viewUserTurn.forEach(turn => {
@@ -31,25 +38,23 @@ const printTurns = () => {
       </div>
     `
     messageTurns.innerHTML += content;
-  
+
   });
 }
 
-addEventInButtons = () => {
+const addEventInButtons = () => {
   const buttonsCancel = document.querySelectorAll(".card-turno__delete");
 
-  buttonsCancel.forEach( button => {
-    console.log(button);
+  buttonsCancel.forEach(button => {
 
-    button.addEventListener('click', (e)=>{
-      console.log(e.target.value);
+    button.addEventListener('click', (e) => {
       deleteTurn(e.target.value)
     });
 
   })
 }
 
-printTurns();
-addEventInButtons();
-
-
+window.addEventListener('load', () => {
+  printTurns();
+  addEventInButtons();
+});
