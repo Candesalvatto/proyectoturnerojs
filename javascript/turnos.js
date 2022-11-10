@@ -3,7 +3,7 @@ window.addEventListener("load", async () => {
       const user = JSON.parse(localStorage.getItem("user")) || verifiedLogin();
 
   
-      // carga de datos desde un JSON 
+      // carga de datos desde un JSON   
       const response = await fetch('../json/data.json');
       const turnos = await response.json();
   
