@@ -55,7 +55,6 @@ const addEventInButtons = () => {
     button.addEventListener('click', (e) => {
       deleteTurn(e.target.value)
     });
-
   })
 }
 

@@ -18,9 +18,7 @@ const validateField = (arrayField) => {
     } else {
         formState = true;
     }
-
 }
-
 
 function ingreso(dni, password) {
 const result = pacientes.find(paciente => paciente.dni === dni);

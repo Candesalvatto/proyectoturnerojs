@@ -122,4 +122,5 @@ formulario.addEventListener('submit', function (e) {
     }, (err) => {
       btn.value = 'Enviar email';
     });
+    
 });

@@ -127,5 +127,4 @@ window.addEventListener("load", async () => {
       });
     }
   
-  
   });
