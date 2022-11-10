@@ -121,6 +121,5 @@ formulario.addEventListener('submit', function (e) {
       btn.value = 'Enviar email';
     }, (err) => {
       btn.value = 'Enviar email';
-      alert(JSON.stringify(err));
     });
 });

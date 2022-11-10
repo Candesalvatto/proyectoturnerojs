@@ -1,10 +1,10 @@
 window.addEventListener("load", async () => {
     try {
       const user = JSON.parse(localStorage.getItem("user")) || verifiedLogin();
-      // const turnosUser = JSON.parse(localStorage.getItem("turnos-user")) || [];
+
   
       // carga de datos desde un JSON 
-      const response = await fetch('../data/turnos.json');
+      const response = await fetch('../json/data.json');
       const turnos = await response.json();
   
       const dataTurnos = JSON.parse(localStorage.getItem("turnos")) || turnos; // array de  fechas de turnos

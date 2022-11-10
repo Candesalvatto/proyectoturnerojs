@@ -2,7 +2,7 @@ const indexButton = document.querySelector('#login');
 const buttonContainer = document.querySelector('.contenedor_boton');
 let user = JSON.parse(localStorage.getItem("user"));
 
-
+//cerrar sesion
 const closeSesion = () => {
     localStorage.removeItem('user');
     user = null;
@@ -26,7 +26,7 @@ const verifiedLogin = () => {
 
     } else {
         indexButton.innerHTML = 'INICIAR SESION';
-        indexButton.href = 'ingreso.html';
+        indexButton.href = './ingreso.html';
         buttonContainer.removeChild(buttonContainer.lastChild);
     }
 }

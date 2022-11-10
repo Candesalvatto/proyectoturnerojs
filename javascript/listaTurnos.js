@@ -2,7 +2,10 @@
 let viewTurns = JSON.parse(localStorage.getItem("turnos-user")) || [];
 const user = JSON.parse(localStorage.getItem("user"));
 const messageTurns = document.querySelector('#turnsViews');
+const closeSesion = document.querySelector("#btn");
 
+
+//funcion para borrar turnos 
  
 const deleteTurn = (id) => {
 
@@ -23,6 +26,8 @@ const deleteTurn = (id) => {
 }
 
 let viewUserTurn = viewTurns.filter(turns => turns.paciente.dni === user.dni);
+
+//agregando card turnos
 
 const printTurns = () => {
   viewUserTurn.forEach(turn => {
@@ -58,3 +63,23 @@ window.addEventListener('load', () => {
   printTurns();
   addEventInButtons();
 });
+
+      // cerrar sesion
+      const cerrarSesion = () => {
+        if (localStorage.getItem("user")) {
+          localStorage.removeItem("user");
+          console.log("sesion cerrada");
+          Swal.fire({
+            icon: "success",
+            title: "Sesion cerrada",
+            showConfirmButton: false,
+            footer: '<a href="./index.html">Inicio</a>',
+          });
+        }
+      };
+  
+      closeSesion.addEventListener("click", (e) => {
+        console.log("sesion cerrada");
+        cerrarSesion();
+      })
+    

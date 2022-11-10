@@ -3,6 +3,8 @@ const form = document.querySelector('.ingreso');
 let formState = false;
 console.log(form)
 
+//validacion del loguin
+
 const validateField = (arrayField) => {
 
     const result = arrayField.filter(field => field.value.trim().length === 0);
@@ -66,5 +68,5 @@ form.addEventListener('submit', (e) => {
 
 if (localStorage.getItem('pacientes')) {
     pacientes = JSON.parse(localStorage.getItem('pacientes'));
-    console.table(pacientes);
+    console.log(pacientes);
 }
