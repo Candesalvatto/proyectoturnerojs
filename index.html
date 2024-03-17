@@ -15,51 +15,140 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   <title>Consultorio de la mujer</title>
-  <link rel="stylesheet" href="styles/styles.css">
+
+  <link rel="stylesheet" href="node_modules/uikit/dist/css/uikit.min.css"/>
+  <link rel="stylesheet" href="sass/styles.css">
 </head>
 
 <body>
-  <div class="banner">
-    <a href="#"><img src="img/logomamamitad.png" alt="logo" title="logo" id="png"></a>
-    <img src="img/cancer-de-mama.jpg" alt="fondo" title="fondo" id="img">
-  </div>
 
-  <div class="contenedor_boton">
-    <a id="login" class="boton_turnos"> INICIAR SESION </a>
+  <section class="homepage">
+    <nav class="navbar-container">
+        <a href="#" class="logo"><img src="img/logoblancoCM.png" alt="logo" title="logo" id="logo"></a>
+        <ul class="ul-navbar">
+          <li class="centered"><a href="#sobre-nosotros">SOBRE NOSOTROS</a></li>
+            <li class="centered"><a href="#descript_info">SERVICIOS</a></li>
+            <li class="centered"><a href="#contacto">CONTACTO</a></li>
+            <li><a id="login">INICIAR SESION</a></li>
+        </ul>
+    </nav>
+    <div class="home">
+      <h1>¡Bienvenida al Consultorio Ginecológico de la Mujer!</h1>
+      <h2>¡Un espacio pensado exclusivamente para vos!</h2>
+      <h3>Un Centro de Diagnóstico y Tratamiento personalizado para cuidar la salud femenina, brindando todo en un mismo lugar.</h3>
+<h3>Ofrecemos ATENCIÓN INTEGRAL – personalizada y a cargo de un equipo multidisciplinario de profesionales- a las mujeres de todas las edades: controlando desde la niñez y adolescencia, pasando por el crecimiento y desarrollo, hasta los años de madurez.</h3>
+    </div>
+</section>
+
+
+
+
+
+
+<section class="conocer-mas" id="sobre-nosotros">
+  <div class="container-conoce-img">
+    <img src="./img/seccion-cdlm3.jpg" alt="img">
   </div>
+  <div class="container-conoce">
+    <img src="./img/circuito-gineco.jpg">
+  <h1>¿Por qué hablamos de atención integral?</h1>
+  <p>Haciendo hincapié en lo Preventivo, este Nuevo Centro contempla no sólo el diagnóstico, sino también el tratamiento más adecuado para cada una de las pacientes.</p>
+  <p>En este sentido, te ofrecemos una ATENCIÓN PERSONALIZADA Y A CARGO DE UN EQUIPO MULTIDISCIPLINARIO DE PROFESIONALES.</p>
+  <p>Basado en un concepto holístico y humanizado, y en el conocimiento acabado de las pacientes, nos centramos en el control de tu desarrollo. Esto es, desde la primera consulta ginecológica al momento de la primera menstruación; pasando por los controles y los planes seguros de anticoncepción durante la etapa de adolescencia; la preparación para una concepción adecuada; la atención posparto en caso de recientes mamás; hasta los controles y asistencia especializada en los años de madurez, menopausia y climaterio.</p>
+<h1>¿Por qué elegirnos?</h1>
+<p>Con una trayectoria de más de 30 años, hemos decidido crear este Centro exclusivamente atendido por nuestro excelente Servicio de Ginecología, que se enfoca en promover cuidados integrales para la salud de la mujer. Porque sabemos que los controles rutinarios para una detección precoz y un tratamiento temprano son las mejores herramientas de prevención, brindamos atención integral en un ambiente cálido, acogedor y accesible.</p>
+<p>Ofrecemos una gama completa de estudios con equipamiento de última generación para la detección, diagnóstico y cuidado de la salud integral de la mujer: mamografía digital, ecografía mamaria y ginecológica</p>
+<p>En pos de lograr nuestros objetivos, nos abocamos a la prevención primaria y secundaria de distintas patologías, tanto benignas como malignas, así como también al tratamiento de enfermedades avanzadas, con una tecnología imagenológica y quirúrgica de la más alta calidad.</p>
+<p>Nuestros servicios incluyen revisiones anuales y pruebas de Papanicolaou de rutina, Video-colposcopías, tratamiento de patologías mamarias y patologías cervicales uterinas; atendemos casos de HPV, infecciones de transmisión sexual, dolores pélvicos y sangrados anormales; realizamos cirugías ginecológicas generales y oncológicas, tratamientos de reproducción y fertilidad; y abordamos casos de menopausia y síntomas de envejecimiento. Brindamos consejería anticonceptiva y servicios de planificación familiar.</p>
+<p>Personalizando, siempre, las opciones de tratamiento para cada una de nuestras pacientes.</p>
+<p>PRIMERO, EN NUESTRAS MANOS.</p>
+</div>
+</section>
 
   <div id="descript_info">
     <h1>Servicio de Diagnóstico por Imágenes</h1>
-    <p>Contamos con la mejor tecnología para tu diagnóstico y con una calidad humana que te hará sentir en casa.</p>
-    <div class="img_icono"> <img src="img/Sin título-2.png"></div>
-    <h2>Ecografías ginecológicas y del embarazo</h2>
-    <ul>
-      <li>Ecografías obstétricas</li>
-      <li>Transvaginal</li>
-      <li>Mamarias</li>
-      <li>Doppler</li>
-    </ul>
-
-    <div class="img_icono"> <img src="img/Sin título-3.png"></div>
-    <h2>Mamografías digitales</h2>
-    <p>Mejor calidad de imágen. Mayor precisión diagnóstica. Una mamografía es la mejor herramienta para la detección
-      temprana del cáncer de mama. Es el estudio no invasivo que todas las mujeres deben realizarse periódicamente a
-      partir de los 35 años.</p>
-    <div class="img_icono"> <img src="img/Sin título-4.png"></div>
-    <h2>Papanicolau y Videocolposcopía</h2>
-    <p>Exámenes de rutina para la detección precoz del cáncer de cuello uterino. Ambos estudios se hacen a partir de que
-      la mujer comienza a tener relaciones sexules y repetir una vez por año.</p>
-    <div class="img_icono"> <img src="img/Sin título-5.png"></div>
-    <h2>Densitomatria ósea</h2>
-    <p>La densitometría es una prueba diagnóstica que mide el grado de mineralización del hueso y que se aplica tanto en
-      el diagnóstico precoz de la osteoporosis como en el control de su evolución y valoración terapeútica.</p>
+    <p class="p-servicios">Contamos con la mejor tecnología para tu diagnóstico y con una calidad humana que te hará sentir en casa.</p>
+    
+    <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+      <div class="uk-card-media-left uk-cover-container">
+          <img src="img/Sin título-2.png" alt="img" uk-cover>
+          <canvas width="600" height="400"></canvas>
+      </div>
+      <div>
+          <div class="uk-card-body">
+              <h3 class="uk-card-title">Ecografías ginecológicas y del embarazo</h3>
+              <div class="ul-services">
+              <ul>
+                <li>Ecografías obstétricas</li>
+                <li>Transvaginal</li>
+                <li>Mamarias</li>
+                <li>Doppler</li>
+              </ul>
+            </div>
+          </div>
+      </div>
   </div>
-  <section class="contacto">
-    <h3> Recibimos todas las obras sociales </h3>
-    <p>Marcelo T. de Alvear 554</p>
-    <p> (365) 4589963 </p>
-    <p>Lunes a Viernes</p>
-    <p>Acreditado por ITAES</p>
+  <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+    <div class="uk-card-media-left uk-cover-container">
+        <img src="img/Sin título-3.png" alt="img" uk-cover>
+        <canvas width="600" height="400"></canvas>
+    </div>
+    <div>
+        <div class="uk-card-body">
+            <h3 class="uk-card-title">Mamografías digitales</h3>
+            <p>Mejor calidad de imágen. Mayor precisión diagnóstica. Una mamografía es la mejor herramienta para la detección
+              temprana del cáncer de mama. Es el estudio no invasivo que todas las mujeres deben realizarse periódicamente a
+              partir de los 35 años.</p>
+        </div>
+    </div>
+</div>
+<div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+  <div class="uk-card-media-left uk-cover-container">
+      <img src="img/Sin título-4.png" alt="img" uk-cover>
+      <canvas width="600" height="400"></canvas>
+  </div>
+  <div>
+      <div class="uk-card-body">
+          <h3 class="uk-card-title">Papanicolau y Videocolposcopía</h3>
+          <p>Exámenes de rutina para la detección precoz del cáncer de cuello uterino. Ambos estudios se hacen a partir de que
+            la mujer comienza a tener relaciones sexules y repetir una vez por año.</p>
+      </div>
+  </div>
+</div>
+<div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+  <div class="uk-card-media-left uk-cover-container">
+      <img src="img/Sin título-5.png" alt="img" uk-cover>
+      <canvas width="600" height="400"></canvas>
+  </div>
+  <div>
+      <div class="uk-card-body">
+          <h3 class="uk-card-title">Densitomatria ósea</h3>
+          <p>La densitometría es una prueba diagnóstica que mide el grado de mineralización del hueso y que se aplica tanto en
+            el diagnóstico precoz de la osteoporosis como en el control de su evolución y valoración terapeútica.</p>
+      </div>
+  </div>
+</div>
+  </div>
+
+
+  <section class="contacto" id="contacto">
+    <div class="container-contacto">
+    <div class="map">
+    <iframe src="https://maps.google.com/?q=40.5509,-105.0668&output=svembed" width="700" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </div>
+  <div class="info-contacto">
+   <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m">
+    <p class="uk-card-title">Marcelo T. de Alvear 554</p>
+    <p class="uk-card-title"> (365) 4589963 </p>
+  </div>
+    <h3> Atención por órden de llegada. </h3>
+    <h3>Lunes a Viernes
+      de 08:30 a 13:00 Hs.
+      y 17:00 a 21:00 Hs.</h3>
+    <h3> No se realizan ecografías los Viernes por la tarde. </h3>
+    <h4>Acreditado por ITAES</h4>
+  </div>
+</div>
   </section>
 
   <footer>
@@ -69,6 +158,7 @@
   </footer>
 
   <script src="./javascript/index.js"></script>
-  </script>
+  <script src="node_modules/uikit/dist/js/uikit.min.js"></script>
+
 </body>
 </html>

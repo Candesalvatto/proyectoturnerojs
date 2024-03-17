@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -5,21 +6,137 @@
 }
 
 body {
-  background: url(../img/fondoacuarela.webp) no-repeat fixed;
   object-fit: cover;
+  background-color: white;
+}
+
+.conocer-mas {
+  width: 100%;
+  margin: 70px auto;
+  display: flex;
+  justify-content: left;
+}
+.conocer-mas .container-conoce-img {
+  width: 40%;
+  height: 900px;
+}
+.conocer-mas .container-conoce-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.conocer-mas .container-conoce {
+  width: 40%;
+  margin-left: 80px;
+  height: 900px;
+  overflow-y: scroll;
+}
+.conocer-mas .container-conoce::-webkit-scrollbar {
+  width: 10px;
+  /* Ancho de la barra de desplazamiento */
+}
+.conocer-mas .container-conoce::-webkit-scrollbar-thumb {
+  background-color: #e05486; /* Color del pulgar de la barra de desplazamiento */
+  border-radius: 5px; /* Radio de borde del pulgar */
+}
+.conocer-mas .container-conoce::-webkit-scrollbar-track {
+  background-color: transparent; /* Color de fondo de la pista */
+}
+.conocer-mas .container-conoce h1 {
+  font-family: "Tajawal", sans-serif;
+  font-size: 2em;
+  font-weight: 900;
+}
+.conocer-mas .container-conoce p {
+  font-family: "Tajawal", sans-serif;
+  font-size: 1.2em;
 }
 
 #descript_info {
-  width: 80%;
+  width: 50%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 140px;
+  border: 2px solid blue;
+}
+#descript_info h1 {
+  font-family: "Tajawal", sans-serif;
+  color: rgb(91, 89, 89);
+  font-weight: 900;
+  font-family: 1.5em;
+  width: 50%;
+  margin: 30px auto;
 }
 #descript_info p {
-  font-size: 1.4em;
-  color: #525099;
   font-family: "Tajawal", sans-serif;
+  color: rgb(91, 89, 89);
   text-align: justify;
-  margin-top: 10%;
+  border: 1px solid orange;
+}
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 800px;
+  background: url("../img/fondo-banner.jpg") center/cover;
+}
+.homepage .home {
+  width: 50%;
+  margin-top: 150px;
+  margin-left: -500px;
+}
+.homepage .home h1 {
+  color: #fff;
+  text-align: left;
+}
+.homepage .home h2 {
+  color: #fff;
+  text-align: left;
+}
+.homepage .home h3 {
+  color: #fff;
+  text-align: left;
+}
+.homepage .navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 80px;
+  position: fixed;
+}
+.homepage .navbar-container .logo {
+  margin-right: auto;
+  width: 180px;
+  margin-left: 20px;
+}
+.homepage .navbar-container .ul-navbar {
+  display: flex;
+  list-style-type: none;
+}
+.homepage .navbar-container .ul-navbar li {
+  margin-right: 20px;
+  margin-top: 0;
+  text-decoration: none;
+}
+.homepage .navbar-container .ul-navbar li a {
+  color: #fff;
+  font-size: 1em;
+  font-weight: 300;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px white;
+}
+.homepage .navbar-container.scrolled {
+  background-color: #fff; /* Cambia el color de fondo a blanco */
+  transition: background-color 0.3s ease; /* Transición suave al cambiar el color de fondo */
+}
+.homepage .navbar-container.scrolled li a {
+  color: #e05486;
+  text-shadow: 1px 1px 1px #e05486;
 }
 
 h1,
@@ -105,18 +222,57 @@ footer {
   width: 100%;
   margin: auto;
   background-color: #fff;
+  border: 2px solid white;
 }
-.contacto h3 {
-  font-size: 1.4em;
-  color: #A8518A;
-  margin-top: 20%;
+.contacto .container-contacto {
+  width: 80%;
+  margin: 40px auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+@keyframes moveDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(10px);
+  }
+}
+.contacto .container-contacto .map {
+  animation: moveDown 0.5s ease forwards;
+}
+.contacto .container-contacto .info-contacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contacto .container-contacto .info-contacto .uk-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.contacto .container-contacto .info-contacto .uk-card-title {
+  color: #525099;
+  font-size: 1.2em;
+}
+.contacto .container-contacto .info-contacto h3 {
+  font-size: 1.2em;
+  color: #525099;
+  text-align: center;
+  font-weight: 500;
+  width: 70%;
+}
+.contacto .container-contacto .info-contacto h4 {
+  font-size: 1.2em;
+  color: #525099;
+  font-weight: 500;
   text-align: center;
 }
-.contacto p {
+.contacto .container-contacto .info-contacto p {
+  font-size: 1.2em;
+  font-weight: 500;
+  color: #525099;
   text-align: center;
-  color: #A8518A;
-  font-size: 1em;
-  margin: 3%;
 }
 
 @media (min-width: 900px) {
@@ -163,7 +319,7 @@ footer {
 /*    SECCION INGRESO  */
 .ingreso,
 .registro {
-  background-color: #A8518A;
+  background-color: #e05486;
   width: 95%;
   height: 280px;
   margin: auto;
@@ -247,7 +403,7 @@ footer {
 
 .register {
   width: 95%;
-  background-color: #A8518A;
+  background-color: #e05486;
   height: 900px;
   margin-top: 20%;
   margin-left: auto;
@@ -333,7 +489,7 @@ button {
 .turnero {
   width: 70%;
   height: auto;
-  background-color: #A8518A;
+  background-color: #e05486;
   margin-left: auto;
   margin-right: auto;
   width: 90%;

@@ -9,6 +9,24 @@ const closeSesion = () => {
     verifiedLogin();
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    var navbar = document.querySelector('.navbar-container');
+    var logo = document.getElementById('logo');
+
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 0) {
+            navbar.classList.add('scrolled');
+            logo.src = '../img/logorosaCM.png';
+        } else {
+            navbar.classList.remove('scrolled');
+            logo.src = '../img/logoblancoCM.png';
+        }
+    });
+});
+
+
+
+
 //funcion de botones loguin 
 const verifiedLogin = () => {
 
