@@ -528,7 +528,6 @@ button {
 }
 .turnero p {
   font-size: 2em;
-  margin-left: 3%;
   color: #FEF8F6;
 }
 .turnero .styleForm {
@@ -544,12 +543,36 @@ button {
 }
 
 #opciones {
-  margin-left: auto;
-  margin-right: auto;
+  width: 550px !important; /* Ajusta el ancho del select */
+  height: 40px; /* Ajusta la altura del select */
+  padding: 5px; /* Ajusta el padding interno */
+  font-size: 16px; /* Ajusta el tamaño de la fuente */
+  border: 1px solid #ccc; /* Ajusta el borde */
+  background-color: #fff; /* Ajusta el color de fondo */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+}
+#opciones .option {
+  width: 550px !important;
+}
+
+#dates {
+  width: 550px !important; /* Ajusta el ancho del select */
+  height: 40px; /* Ajusta la altura del select */
+  padding: 10px; /* Ajusta el padding interno */
+  font-size: 16px; /* Ajusta el tamaño de la fuente */
+  border: 1px solid #ccc; /* Ajusta el borde */
+  background-color: #fff; /* Ajusta el color de fondo */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
 }
 
 #obraSocial {
   margin: auto;
+  width: 550px;
+  height: 40px;
+}
+
+#coment {
+  width: 550px !important;
 }
 
 .turnos {
@@ -580,6 +603,10 @@ button {
   font-weight: 700;
 }
 
+#btn {
+  font-size: 2em;
+}
+
 @media (min-width: 900px) {
   p {
     font-size: 3em;
@@ -602,10 +629,12 @@ button {
 }
 #turnsViews {
   font-size: 0.5em;
+  padding: 40px;
 }
 
 .card-turno {
   font-family: "Tajawal", sans-serif;
+  font-size: 1.3em;
   margin: 20px auto;
   width: 70%;
   padding: 15px;
